@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-ul{
+ul {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -9,19 +9,19 @@ ul{
     margin: 0 auto;
 }
 
-ul li{
+ul li {
     padding: 0 20px;
     background: gray;
 }
 
-.wrap{
+.wrap {
     display: flex;
     justify-content: space-between;
     max-width: 980px;
     margin: 0 auto;
 }
 
-.wrap div{
+.wrap div {
     width: 30%;
     height: 300px;
     background: red;
