@@ -42,11 +42,11 @@ img {
     border: none;
 }
 
+/* ここから課題です */
 body {
     background-color: #eeeeee;
 }
 
-/* ここから課題です */
 .service h1 {
     font-size: 30px;
     color: #007c6b;
@@ -68,10 +68,7 @@ body {
 }
 
 .item-list dl {
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 .item-list dt {
@@ -96,7 +93,6 @@ body {
 
     .item-list li {
         width: 100%;
-        margin: 0 auto;
         margin-bottom: 30px;
     }
 
