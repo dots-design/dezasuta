@@ -22,6 +22,7 @@ li {
     font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
         "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
         "ＭＳ 明朝", serif;
+    font-feature-settings: "palt";
 }
 
 a {
@@ -78,19 +79,33 @@ img {
         "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     text-align: center;
 }
+
 /* 背景 */
 main {
     background-color: #e8d9bf;
 }
+
+/* 横の余白 */
+#about,
+#menu,
+#event {
+    padding: 0 10px;
+}
+
+/* コンテンツ幅 */
 .section-inner {
     max-width: 1000px;
     margin: 0 auto;
 }
 
+/* 理念 */
+.company_hope {
+    padding-top: 113px;
+}
+
 .conpany_hope_1 {
     font-size: 30px;
     text-align: center;
-    padding-top: 104px;
 }
 
 .conpany_hope_2 {
@@ -98,70 +113,82 @@ main {
     text-align: center;
     line-height: 1.2;
     letter-spacing: 0.1em;
-    padding-top: 52px;
+    padding-top: 40px;
 }
 .conpany_hope_3 {
     font-size: 23px;
     text-align: center;
     line-height: 1.7;
     letter-spacing: 0.1em;
-    padding: 25px 0 100px 0;
+    padding: 20px 0 90px 0;
 }
-
-#about {
-    padding: 0 10px;
-}
-.about_us_contents {
+/* 私たちについて */
+.col-2 {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: nowrap;
+    align-items: flex-start; /**上下の中央配置**/
+    text-align: center;
 }
 
-.about_us_img {
+.item {
     max-width: 500px;
+    display: table-cell;
+    vertical-align: top; /**幅を全体の半分ずつへ分割**/
 }
-
-.about_us_img img {
-    border-radius: 0 0 82px 0;
+.item_img {
+    width: 500px;
 }
 
 .kadomaru {
-    border-radius: 0 0 30px 0; /* 角丸の指定 */
+    border-radius: 0 0 80px 0; /* 角丸の指定 */
 }
 
-.col .title_pc {
+.item_Text {
+    padding: 0 0 0 80px;
+}
+
+.item .title_pc {
     width: 272px;
     line-height: 1.6;
+    margin-top: 50px;
     margin-bottom: 48.5px;
 }
 .about_us_mainText {
-    font-size: 44x;
+    font-size: 44px;
     line-height: 1.4;
-    padding: 45px 0 20px 0;
+    text-align: left;
+    margin-top: 48px;
 }
 
 .about_us_subText {
     font-size: 16px;
     text-align: left;
+    margin-top: 22px;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
 }
 
-#menu {
-    padding: 0 10px;
-}
+/* メニュー */
 
-.menu .item-list {
-    display: flex;
-    justify-content: space-between;
-}
 .menu .title {
     width: 151px;
     margin: 0 auto;
-    padding: 100px 0 40px 0;
+    padding: 80px 0 30px 0;
+}
+.menu .item-list {
+    display: flex;
+    justify-content: space-between;
 }
 
 .kadomaru_2 {
     border-radius: 0 40px 0 0; /* 角丸の指定 */
 }
+
+.item-list li {
+    width: 300px;
+    width: 30%;
+}
+
 .item-list dt {
     color: #d30202;
     font-size: 38px;
@@ -175,38 +202,83 @@ main {
     line-height: 1.5;
 }
 
+/* ギャラリー */
+
 .gallery .title {
     width: 245px;
     margin: 0 auto;
+    padding: 40px 0 20px 0;
 }
 
 .gallery_wrap {
     display: flex;
-    width: 100%;
 }
+
+/* イベント */
 
 .event .title {
     width: 173px;
     margin: 0 auto;
+    padding: 60px 0 25px 0;
+}
+
+.event_wrap {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    border: 3.7px solid;
+}
+
+.flex-container {
+    font-size: 23px;
+    line-height: 2;
+    margin: 30px 160px 0 160px;
+}
+.flex-item {
+    display: flex;
+    padding-bottom: 27px;
+}
+
+.date {
+    padding-right: 55px;
+}
+.news {
+    font-size: 23px;
+    text-decoration: underline;
 }
 
 .access .title {
     width: 213px;
     margin: 0 auto;
+    padding: 75px 0 40px 0;
+}
+
+.map iframe {
+    display: block;
 }
 
 .fotter_contents {
     display: flex;
+    padding: 80px;
 }
 .fotter_contents .footer_logo {
     width: 226px;
 }
 .footer_text {
     font-size: 20px;
-    text-align: left;
+    line-height: 2;
+    padding-left: 70px;
 }
 .footer_copy {
     font-size: 16px;
     text-align: center;
     margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+.pagetop {
+    position: fixed;
+    width: 125px;
+    right: 40px;
+    bottom: 40px;
 }
