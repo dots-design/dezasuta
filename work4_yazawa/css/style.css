@@ -192,6 +192,12 @@ main {
     margin: 0 auto;
 }
 
+@media screen and (max-width: 767px) {
+    .section-inner {
+        max-width: 335px;
+        margin: 0 auto;
+    }
+}
 /* 理念 */
 .company_hope {
     padding-top: 113px;
@@ -216,6 +222,38 @@ main {
     letter-spacing: 0.1em;
     padding: 20px 0 90px 0;
 }
+@media screen and (max-width: 1100px) {
+    .company_hope_1 {
+        font-size: 25px;
+    }
+
+    .company_hope_2 {
+        font-size: 68px;
+    }
+
+    .company_hope_3 {
+        font-size: 19px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .company_hope {
+        padding-top: 40px;
+    }
+    .company_hope_1 {
+        font-size: 17px;
+    }
+
+    .company_hope_2 {
+        font-size: 37px;
+        letter-spacing: 0.02em;
+        padding-top: 25px;
+    }
+
+    .company_hope_3 {
+        font-size: 16px;
+    }
+}
+
 /* 私たちについて */
 
 .col-2 {
@@ -255,6 +293,32 @@ main {
     letter-spacing: 0.1em;
 }
 
+@media screen and (max-width: 1100px) {
+    .about_us_mainText {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .col-2 {
+        display: block;
+    }
+
+    .item_img {
+        width: 375px;
+    }
+    .item .title_pc {
+        width: 160px;
+    }
+
+    .item_Text {
+        padding: 0px;
+    }
+
+    .kadomaru {
+        display: none;
+    }
+}
 /* メニュー */
 
 .menu .title {
@@ -288,6 +352,21 @@ main {
     line-height: 1.5;
 }
 
+@media screen and (max-width: 767px) {
+    .menu .item-list {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .item-list li {
+        width: 100%;
+    }
+
+    .menu .title {
+        width: 87px;
+    }
+}
+
 /* ギャラリー */
 
 .gallery .title {
@@ -300,6 +379,15 @@ main {
     display: flex;
 }
 
+@media screen and (max-width: 767px) {
+    .gallery_wrap {
+        display: block;
+    }
+
+    .gallery .title {
+        width: 140px;
+    }
+}
 /* イベント */
 
 .event .title {
@@ -334,6 +422,17 @@ main {
     font-size: 23px;
     text-decoration: underline;
 }
+
+@media screen and (max-width: 767px) {
+    .flex-item {
+        display: block;
+    }
+
+    .event .title {
+        width: 100px;
+    }
+}
+
 /* アクセス */
 .access .title {
     width: 213px;
@@ -345,6 +444,18 @@ main {
     display: block;
     width: 100%;
     height: 470px;
+}
+
+@media screen and (max-width: 767px) {
+    .map iframe {
+        display: block;
+        width: 100%;
+        height: 270px;
+    }
+
+    .access .title {
+        width: 120px;
+    }
 }
 
 /* フッター */
@@ -373,10 +484,27 @@ main {
     display: block;
 }
 
+@media screen and (max-width: 767px) {
+    .fotter_contents {
+        display: block;
+    }
+
+    .footer_text {
+        text-align: left;
+        padding: 0px;
+    }
+}
+
 /* ページトップボタン */
 .pagetop {
     position: fixed;
     width: 125px;
     right: 40px;
     bottom: 40px;
+}
+
+@media screen and (max-width: 767px) {
+    .pagetop {
+        width: 100px;
+    }
 }
