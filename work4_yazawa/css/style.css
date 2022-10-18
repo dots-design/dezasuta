@@ -61,10 +61,16 @@ img {
     box-sizing: border-box;
 }
 
+.header_slider img {
+    width: 100%;
+}
+
 .header_logo {
     width: 226px;
 }
-
+.header_slider img {
+    width: 100%;
+}
 .pc_nav ul {
     display: flex;
 }
@@ -180,7 +186,9 @@ main {
 }
 
 /* 横の余白 */
-#About,
+#About {
+    padding: 90px 10px 0 10px;
+}
 #Menu,
 #Event {
     padding: 0 10px;
@@ -188,7 +196,7 @@ main {
 
 @media screen and (max-width: 767px) {
     #About {
-        padding: 0;
+        padding: 60px 0 0 0;
     }
     #Menu {
         padding: 0 38px;
@@ -243,7 +251,7 @@ main {
     text-align: center;
     line-height: 1.7;
     letter-spacing: 0.1em;
-    padding: 20px 0 90px 0;
+    padding: 20px 0 0 0;
 }
 @media screen and (max-width: 1100px) {
     .company_hope_1 {
@@ -274,7 +282,7 @@ main {
 
     .company_hope_3 {
         font-size: 16px;
-        padding: 15px 0 60px 0;
+        padding: 15px 0 0 0;
     }
 }
 
@@ -284,8 +292,8 @@ main {
     display: flex;
 }
 
-.pc_only {
-    width: 500px;
+.col-2 .item:first-child {
+    min-width: 50%;
 }
 
 .kadomaru {
@@ -328,19 +336,14 @@ main {
     }
 }
 @media screen and (max-width: 767px) {
-    #About {
-        position: relative;
-        top: -60px;
-    }
     .col-2 {
         display: block;
-        top: -20px;
     }
 
     .item .title_pc {
         width: 160px;
         margin: 0 auto;
-        margin-top: 50px;
+        margin-top: 0;
         margin-bottom: 15px;
     }
 
@@ -351,13 +354,18 @@ main {
     .item_Text {
         padding: 0;
     }
+
+    .item_Text img {
+        width: 100%;
+    }
+
     .about_us_mainText {
         font-size: 36px;
         margin-top: 35px;
-        padding: 0 10px;
+        padding: 0 20px;
     }
     .about_us_subText {
-        padding: 0 10px;
+        padding: 0 20px;
     }
 }
 
@@ -397,24 +405,24 @@ main {
 @media screen and (max-width: 767px) {
     .menu .item-list {
         display: block;
-        margin: 0 auto;
-        width: 100%;
     }
     .item-list li {
         width: 100%;
-        text-align: center;
     }
+
+    .menu .item-list img {
+        width: 100%;
+    }
+
     .menu .title {
         width: 87px;
-        padding: 0px 0 20px 0;
+        padding: 40px 0 20px 0;
     }
     .item-list dt {
         font-size: 40px;
-        text-align: left;
         margin-bottom: 20px;
     }
     .item-list dd {
-        text-align: left;
         font-size: 17px;
         line-height: 1.8;
         margin: 0 0 50px 0;
@@ -460,7 +468,7 @@ main {
 .flex-container {
     font-size: 23px;
     line-height: 2;
-    margin: 25px 149px;
+    padding: 35px;
 }
 
 .flex-item {
@@ -481,11 +489,13 @@ main {
 @media screen and (max-width: 767px) {
     .event_wrap {
         display: flex;
-        text-align: left;
     }
+
     .flex-container {
         font-size: 16px;
-        margin: 25px 30px;
+        padding: 25px 30px;
+        width: 100%;
+        box-sizing: border-box;
     }
     .flex-item {
         display: block;
@@ -494,6 +504,19 @@ main {
     .event .title {
         width: 100px;
         padding: 30px 0 20px 0;
+    }
+    .date {
+        padding-right: 0;
+    }
+
+    .news a {
+        display: inline-block;
+        overflow: hidden;
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 16px;
+        text-decoration: underline;
     }
 }
 
@@ -514,7 +537,7 @@ main {
     .map iframe {
         display: block;
         width: 100%;
-        height: 270px;
+        height: 190px;
     }
 
     .access .title {
@@ -545,9 +568,6 @@ main {
     margin: 0 auto;
     padding-bottom: 80px;
 }
-.footer_text span {
-    display: block;
-}
 
 @media screen and (max-width: 767px) {
     .fotter_contents {
@@ -559,6 +579,8 @@ main {
         text-align: left;
         font-size: 18px;
         padding: 0px;
+        margin-top: 20px;
+        line-height: 1.72;
     }
     .footer_copy {
         padding-bottom: 30px;
@@ -576,7 +598,19 @@ main {
 @media screen and (max-width: 767px) {
     .pagetop {
         width: 100px;
-        right: 10px;
-        bottom: 10px;
     }
+}
+
+/*スライダー調整  */
+.slick-dots {
+    bottom: 20px;
+}
+
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+    color: #fff;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
 }
