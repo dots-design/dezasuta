@@ -446,15 +446,8 @@ main {
 
 /* 矢印 */
 .slick-arrow {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    padding: 0;
-    width: 19px;
-    height: 19px;
-    color: #fff;
+    width: 50px;
+    height: 50px;
     z-index: 1;
 }
 
@@ -464,11 +457,8 @@ main {
 .slick-prev::before,
 .slick-prev::after {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: 0 auto;
+    top: 50%;
     content: "";
-    vertical-align: middle;
 }
 .slick-next::after,
 .slick-prev::after {
@@ -480,10 +470,10 @@ main {
 
 /* next */
 .slick-next {
-    right: 24%;
+    right: 22%;
 }
 .slick-next::after {
-    transform: rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
 }
 
 /* prev */
@@ -491,7 +481,7 @@ main {
     left: 22%;
 }
 .slick-prev::after {
-    transform: rotate(-135deg);
+    transform: translate(-50%, -50%) rotate(-135deg);
 }
 
 @media screen and (max-width: 767px) {
@@ -517,7 +507,7 @@ main {
         height: 15px;
     }
     .slick-next {
-        right: 30px;
+        right: 20px;
     }
     .slick-prev {
         left: 20px;
