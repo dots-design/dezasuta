@@ -430,7 +430,6 @@ main {
 }
 
 /* ギャラリー */
-
 .gallery .title {
     width: 245px;
     margin: 0 auto;
@@ -439,6 +438,60 @@ main {
 
 .gallery_wrap {
     display: flex;
+}
+
+.gallery_wrap img:hover {
+    opacity: 0.7;
+}
+
+/* 矢印 */
+.slick-arrow {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 0;
+    width: 19px;
+    height: 19px;
+    color: #fff;
+    z-index: 1;
+}
+
+/* 共通設定 */
+.slick-next::before,
+.slick-next::after,
+.slick-prev::before,
+.slick-prev::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    content: "";
+    vertical-align: middle;
+}
+.slick-next::after,
+.slick-prev::after {
+    width: 25px;
+    height: 25px;
+    border-top: solid 5px #fff;
+    border-right: solid 5px #fff;
+}
+
+/* next */
+.slick-next {
+    right: 24%;
+}
+.slick-next::after {
+    transform: rotate(45deg);
+}
+
+/* prev */
+.slick-prev {
+    left: 22%;
+}
+.slick-prev::after {
+    transform: rotate(-135deg);
 }
 
 @media screen and (max-width: 767px) {
@@ -450,7 +503,27 @@ main {
         width: 140px;
         padding: 30px 0 20px 0;
     }
+
+    .slick-next::after,
+    .slick-prev::after {
+        border-top: solid 2px #fff;
+        border-right: solid 2px #fff;
+    }
+    .slick-next::before,
+    .slick-prev::before,
+    .slick-next::after,
+    .slick-prev::after {
+        width: 15px;
+        height: 15px;
+    }
+    .slick-next {
+        right: 30px;
+    }
+    .slick-prev {
+        left: 20px;
+    }
 }
+
 /* イベント */
 
 .event .title {
