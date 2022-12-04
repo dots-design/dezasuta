@@ -53,8 +53,6 @@ img {
 }
 
 .header_top {
-    width: calc(100%-90px);
-    margin: 0 auto;
     position: relative;
 }
 .header_in {
@@ -68,9 +66,7 @@ img {
 }
 
 .header_pic {
-    width: calc(100%-90px);
-    top: 0;
-    left: 0;
+    width: calc(100%- 90px);
 }
 .header-ico {
     width: 87px;
@@ -97,6 +93,7 @@ img {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 16px;
 }
 
 .pc_nav {
