@@ -1,0 +1,601 @@
+@charset "utf-8";
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #938383;
+    font-weight: normal;
+    font-family: "Zen Maru Gothic", "Reem Kufi", "sans-serif", "游明朝",
+        "YuMincho", "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3",
+        "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    font-feature-settings: "palt";
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/* headerここから */
+#header {
+    background-color: #f2f2f2;
+}
+
+.header_top {
+    width: calc(100%-90px);
+    margin: 0 auto;
+    position: relative;
+}
+.header_in {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    top: 90px;
+    right: 15px;
+}
+
+.header_pic {
+    width: calc(100%-90px);
+    top: 0;
+    left: 0;
+}
+.header-ico {
+    width: 87px;
+    top: 200px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-ttl {
+    top: 300px;
+    width: 242px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-name {
+    top: 350px;
+    margin: 0 auto;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pc_nav {
+    display: none;
+}
+
+.pc_nav ul {
+    display: flex;
+}
+
+.pc_nav ul li {
+    width: 105px;
+    margin-left: 55px;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* スマホ版メニューを消す */
+.sp_nav,
+.sp_btn {
+    display: none;
+}
+
+/* ハンバーガー */
+.pc_btn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    height: 23px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.pc_btn span {
+    display: block;
+    position: relative;
+    top: 10px;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background: #938383;
+    transition: 0.3s;
+}
+
+.pc_btn span::before,
+.pc_btn span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 33px;
+    height: 3px;
+    border-radius: 2px;
+    background: #938383;
+    transition: 0.3s;
+}
+
+.pc_btn span::before {
+    bottom: 10px;
+}
+
+.pc_btn span::after {
+    top: 10px;
+}
+
+/* ハンバーガー閉じる */
+.pc_btn.open span {
+    background: transparent;
+}
+
+.pc_btn.open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+.pc_btn.open span::after {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+/* ハンバーガーメニュー */
+.pc_nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #938383;
+    z-index: 1;
+}
+
+.pc_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.pc_nav ul li {
+    padding: 20px 0;
+    color: #fff;
+    font-size: 18px;
+}
+
+.header-contact page-link {
+    display: block;
+}
+
+a.contact_link {
+    font-size: 12px;
+    font-family: "Reem Kufi";
+    padding: 5px 0 20px 0;
+}
+.header-instagram page-link {
+    display: block;
+}
+a.instagram_link {
+    font-size: 12px;
+    font-family: "Reem Kufi";
+    padding: 5px 0 20px 0;
+}
+
+@media screen and (max-width: 1100px) {
+    .pc_nav {
+        display: none;
+    }
+    /* ハンバーガー */
+    .sp_btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        height: 23px;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .sp_btn span {
+        display: block;
+        position: relative;
+        top: 10px;
+        width: 33px;
+        height: 3px;
+        border-radius: 2px;
+        background: #938383;
+        transition: 0.3s;
+    }
+
+    .sp_btn span::before,
+    .sp_btn span::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 33px;
+        height: 3px;
+        border-radius: 2px;
+        background: #938383;
+        transition: 0.3s;
+    }
+
+    .sp_btn span::before {
+        bottom: 10px;
+    }
+
+    .sp_btn span::after {
+        top: 10px;
+    }
+
+    /* ハンバーガー閉じる */
+    .sp_btn.open span {
+        background: transparent;
+    }
+
+    .sp_btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    .sp_btn.open span::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    /* ハンバーガーメニュー */
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba#938383;
+        z-index: 1;
+    }
+
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .sp_nav ul li {
+        padding: 20px 0;
+        color: #fff;
+        font-size: 18px;
+    }
+}
+
+/* 背景 */
+main {
+    background-color: #f2f2f2;
+}
+
+/* 横の余白 */
+#About,
+#Services,
+#Works {
+    padding: 120px 0px;
+}
+
+#Contact {
+    padding: 80px 0px;
+}
+
+@media screen and (max-width: 767px) {
+    #About,
+    #Services,
+    #Works,
+    #Contact {
+        padding: 80px 0px;
+    }
+}
+
+/* コンテンツ幅 */
+.section-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* レスポンシブ */
+.pc_only {
+    display: block;
+}
+
+.sp_only {
+    display: none;
+}
+@media screen and (max-width: 767px) {
+    .pc_only {
+        display: none;
+    }
+    .sp_only {
+        display: block;
+    }
+}
+
+/* about*/
+
+.about .title {
+    width: 122px;
+    margin: 0 auto;
+    padding: 80px 0 30px 0;
+}
+
+.about_message {
+    text-align: center;
+    line-height: 3;
+    padding-bottom: 100px;
+}
+.about_top {
+    justify-content: center;
+}
+.col-2 {
+    display: flex;
+}
+
+.item {
+    align-items: center;
+}
+
+.item_picture {
+    width: 50%;
+}
+
+.item .title_pc {
+    width: 163px;
+    line-height: 1.6;
+}
+.about_us_mainText {
+    line-height: 1.4;
+    text-align: left;
+}
+
+.about_us_subText {
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+}
+
+.about_ring {
+    width: 36px;
+}
+
+@media screen and (max-width: 767px) {
+    .col-2 {
+        display: block;
+    }
+
+    .item .title_pc {
+        width: 160px;
+        margin: 0 auto;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .item_Text {
+        padding: 0;
+    }
+
+    .item_Text img {
+        width: 100%;
+    }
+}
+
+/* services*/
+
+.services .title {
+    width: 122px;
+    margin: 0 auto;
+}
+.services_tool {
+    text-align: center;
+    font-size: 14px;
+    padding: 80px 0 30px 0;
+}
+
+.services_detail {
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 40px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    justify-content: space-around;
+}
+
+.container img {
+    width: 116px;
+}
+
+.container dt {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 0 35px 0;
+    text-align: center;
+}
+
+.item1 {
+    align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+    .menu .item-list {
+        display: block;
+    }
+    .item-list li {
+        width: 100%;
+    }
+
+    .menu .item-list img {
+        width: 100%;
+    }
+
+    .menu .title {
+        width: 87px;
+        padding: 40px 0 20px 0;
+    }
+    .item-list dt {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+/* works */
+
+.works .title {
+    width: 91px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+.works_detail {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.works_wrap {
+    display: flex;
+}
+
+.works_wrap img:hover {
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 767px) {
+    .works_wrap {
+        display: block;
+    }
+
+    .works .title {
+        width: 140px;
+        padding: 30px 0 20px 0;
+    }
+}
+
+/* contact */
+.contact {
+    background-image: url("../images/contact_pic-100.jpg");
+}
+
+.contact .title {
+    width: 134px;
+    margin: 0 auto;
+}
+.contact_top {
+    text-align: center;
+    padding: 30px 0;
+    line-height: 2;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.contact_apple {
+    position: relative;
+}
+
+.contact_btn {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.contact_bottom {
+    position: absolute;
+    top: 100px;
+    left: 450px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+
+/* footer */
+footer {
+    background-color: #938383;
+}
+
+.footer_contents {
+    display: block;
+    padding-top: 50px;
+}
+.footer_contents .footer_logo {
+    width: 60px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.footer_name {
+    width: 162px;
+    margin: 0 auto;
+}
+
+.footer_text {
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+.footer_copy {
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+/* ページトップボタン */
+.pagetop {
+    position: fixed;
+    width: 24px;
+    left: 40px;
+    bottom: 40px;
+}
+
+@media screen and (max-width: 767px) {
+    .pagetop {
+        width: 100px;
+    }
+}
