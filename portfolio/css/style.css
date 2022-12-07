@@ -62,15 +62,20 @@ img {
     flex-wrap: wrap;
     flex-direction: column;
     top: 90px;
-    right: 15px;
+    right: 20px;
 }
 
 .header_pic {
     width: calc(100% - 90px);
 }
+
+.header_pic img {
+    width: 100%;
+}
+
 .header-ico {
     width: 87px;
-    top: 200px;
+    top: 220px;
     margin: 0 auto;
     position: absolute;
     left: 50%;
@@ -78,7 +83,7 @@ img {
 }
 
 .header-ttl {
-    top: 300px;
+    top: 330px;
     width: 242px;
     margin: 0 auto;
     position: absolute;
@@ -86,14 +91,15 @@ img {
     transform: translate(-50%, -50%);
 }
 
-.header-name {
-    top: 350px;
+a.header-name {
+    top: 380px;
     margin: 0 auto;
-    color: #fff;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: #fff;
     font-size: 16px;
+    text-align: center;
 }
 
 .pc_nav {
@@ -122,10 +128,7 @@ img {
     display: block;
     position: absolute;
     top: 20px;
-    right: 25px;
-    height: 23px;
-    cursor: pointer;
-    z-index: 2;
+    right: 30px;
 }
 
 .pc_btn span {
@@ -196,10 +199,7 @@ img {
     padding: 20px 0;
     color: #fff;
     font-size: 18px;
-}
-
-.header-contact page-link {
-    display: block;
+    font-family: "Reem Kufi";
 }
 
 a.contact_link {
@@ -207,8 +207,13 @@ a.contact_link {
     font-family: "Reem Kufi";
     padding: 5px 0 20px 0;
 }
-.header-instagram page-link {
-    display: block;
+
+.header-contactpage-link {
+    width: 16px;
+}
+
+.header-instagrampage-link {
+    width: 16px;
 }
 a.instagram_link {
     font-size: 12px;
@@ -299,6 +304,7 @@ a.instagram_link {
         padding: 20px 0;
         color: #fff;
         font-size: 18px;
+        font-family: "Reem Kufi";
     }
 }
 
@@ -308,14 +314,20 @@ main {
 }
 
 /* 横の余白 */
-#About,
-#Services,
+#About {
+    padding: 120px 0px 0px 0px;
+}
+
+#Services {
+    padding: 150px 0px 0px 0px;
+}
+
 #Works {
-    padding: 120px 0px;
+    padding: 150px 0 150px 0px;
 }
 
 #Contact {
-    padding: 80px 0px;
+    padding: 80px 0 100px 0px;
 }
 
 @media screen and (max-width: 767px) {
@@ -330,6 +342,11 @@ main {
 /* コンテンツ幅 */
 .section-inner {
     max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-inner2 {
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -362,40 +379,62 @@ main {
     text-align: center;
     line-height: 3;
     padding-bottom: 100px;
-}
-.about_top {
-    justify-content: center;
-}
-.col-2 {
-    display: flex;
+    font-size: 18px;
 }
 
-.item {
+.col-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.about_item1 {
+    display: flex;
     align-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about_item2 {
+    display: flex;
 }
 
 .item_picture {
     width: 50%;
 }
 
-.item .title_pc {
-    width: 163px;
-    line-height: 1.6;
-}
 .about_us_mainText {
     line-height: 1.4;
-    text-align: left;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 12px;
 }
 
-.about_us_subText {
-    font-size: 16px;
-    text-align: left;
+.title_pc {
+    width: 163px;
     line-height: 1.6;
-    letter-spacing: 0.1em;
+    margin: 0 auto;
+    padding-bottom: 15px;
 }
 
 .about_ring {
     width: 36px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+.about_us_subText {
+    font-size: 14px;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 0.1em;
+}
+
+.about_us_more {
+    padding-top: 40px;
+    text-align: right;
+    font-size: 14px;
 }
 
 @media screen and (max-width: 767px) {
@@ -434,28 +473,61 @@ main {
 .services_detail {
     text-align: center;
     font-size: 14px;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 }
 
-.container {
+.services_container,
+.services_container2 {
     display: grid;
-    grid-template-columns: 300px 300px 300px;
-    justify-content: space-around;
+    grid-template-columns: 241px 241px 241px;
+    justify-content: center;
 }
 
-.container img {
+.item1 img,
+.item2 img,
+.item3 img,
+.item4 img,
+.item5 img,
+.item6 img {
     width: 116px;
 }
 
-.container dt {
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+.item1 dt,
+.item2 dt,
+.item3 dt,
+.item4 dt,
+.item5 dt,
+.item6 dt {
     font-size: 14px;
     font-weight: bold;
-    padding: 5px 0 35px 0;
+    padding: 10px 0 35px 0;
     text-align: center;
 }
 
-.item1 {
-    align-items: center;
+.graphic {
+    background: #d8cece;
+}
+
+.web {
+    background: #e5e5e5;
+}
+
+p.services_gra,
+p.services_web {
+    text-align: center;
+    padding: 30px 0;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 767px) {
@@ -494,12 +566,38 @@ main {
     padding-bottom: 30px;
 }
 
+.works_container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    justify-content: space-between;
+}
+
+.work1,
+.work2,
+.work3,
+.work4,
+.work5,
+.work6 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    padding-bottom: 30px;
+}
+
 .works_wrap {
     display: flex;
 }
 
 .works_wrap img:hover {
     opacity: 0.7;
+}
+
+.works_more {
+    text-align: right;
+    padding-top: 20px;
+    font-size: 14px;
 }
 
 @media screen and (max-width: 767px) {
@@ -541,11 +639,12 @@ main {
 
 .contact_bottom {
     position: absolute;
-    top: 100px;
+    top: 90px;
     left: 450px;
     text-align: center;
     font-size: 16px;
     color: #fff;
+    line-height: 1.6;
 }
 
 /* footer */
