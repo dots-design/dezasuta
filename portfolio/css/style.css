@@ -129,27 +129,27 @@ a.header-name {
     position: absolute;
     top: 20px;
     right: 30px;
+    z-index: 2;
 }
 
 .pc_btn span {
     display: block;
     position: relative;
-    top: 10px;
-    width: 33px;
-    height: 3px;
-    border-radius: 2px;
+    top: 20px;
+    width: 35px;
+    height: 1px;
+    border-radius: 1px;
     background: #938383;
     transition: 0.3s;
 }
 
-.pc_btn span::before,
-.pc_btn span::after {
+.pc_btn span::before {
     content: "";
     display: block;
     position: absolute;
-    width: 33px;
-    height: 3px;
-    border-radius: 2px;
+    width: 35px;
+    height: 1px;
+    border-radius: 1px;
     background: #938383;
     transition: 0.3s;
 }
@@ -158,23 +158,15 @@ a.header-name {
     bottom: 10px;
 }
 
-.pc_btn span::after {
-    top: 10px;
-}
-
 /* ハンバーガー閉じる */
 .pc_btn.open span {
-    background: transparent;
-}
-
-.pc_btn.open span::before {
     bottom: 0;
     transform: rotate(45deg);
 }
 
-.pc_btn.open span::after {
+.pc_btn.open span::before {
     top: 0;
-    transform: rotate(135deg);
+    transform: rotate(90deg);
 }
 
 /* ハンバーガーメニュー */
@@ -184,7 +176,7 @@ a.header-name {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: #938383;
+    background: #b2a3a3;
     z-index: 1;
 }
 
@@ -222,7 +214,8 @@ a.instagram_link {
 }
 
 @media screen and (max-width: 1100px) {
-    .pc_nav {
+    .pc_nav,
+    .pc_btn {
         display: none;
     }
     /* ハンバーガー */
@@ -230,7 +223,7 @@ a.instagram_link {
         display: block;
         position: absolute;
         top: 20px;
-        right: 25px;
+        right: 30px;
         height: 23px;
         cursor: pointer;
         z-index: 2;
@@ -240,20 +233,19 @@ a.instagram_link {
         display: block;
         position: relative;
         top: 10px;
-        width: 33px;
-        height: 3px;
+        width: 35px;
+        height: 1px;
         border-radius: 2px;
         background: #938383;
         transition: 0.3s;
     }
 
-    .sp_btn span::before,
-    .sp_btn span::after {
+    .sp_btn span::before {
         content: "";
         display: block;
         position: absolute;
-        width: 33px;
-        height: 3px;
+        width: 35px;
+        height: 1px;
         border-radius: 2px;
         background: #938383;
         transition: 0.3s;
@@ -263,23 +255,15 @@ a.instagram_link {
         bottom: 10px;
     }
 
-    .sp_btn span::after {
-        top: 10px;
-    }
-
     /* ハンバーガー閉じる */
     .sp_btn.open span {
-        background: transparent;
-    }
-
-    .sp_btn.open span::before {
         bottom: 0;
         transform: rotate(45deg);
     }
 
-    .sp_btn.open span::after {
+    .sp_btn.open span::before {
         top: 0;
-        transform: rotate(135deg);
+        transform: rotate(90deg);
     }
 
     /* ハンバーガーメニュー */
@@ -289,7 +273,7 @@ a.instagram_link {
         left: 0;
         width: 100%;
         height: 100vh;
-        background: rgba#938383;
+        background: #b2a3a3;
         z-index: 1;
     }
 
@@ -639,8 +623,9 @@ p.services_web {
 
 .contact_bottom {
     position: absolute;
-    top: 90px;
-    left: 450px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 120px;
     text-align: center;
     font-size: 16px;
     color: #fff;
