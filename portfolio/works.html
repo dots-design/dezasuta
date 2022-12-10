@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dot.s design</title>
+    <meta name="description" content="dot.s design │ Web・グラフィックデザイン">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+
+
+<body>
+    <header id="header">
+        <div class="header_top">
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#works">works</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+            <div class="pc_btn"><span></span></div>
+
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#works">works</a></li>
+                    <li><a href="#contact">contact</a></li>
+                    <li><a href="#"><img src="images/Instagram_white@2x.png" alt="Instagram"></a></li>
+                </ul>
+            </nav>
+
+            <div class="sp_btn"><span></span></div>
+
+            <div class="header_in">
+                <div class="header_contact">
+                    <a class="header_contactpage_link" href="#contact"><img src="images/apple@2x.png" alt="contact">
+                        <div class="contact_link">contact</div>
+                    </a>
+                </div>
+                <div class="header_instagram">
+                    <a class="header_instagrampage_link" href="#"><img src="images/Instagram@2x.png" alt="Instagram">
+                        <div class="instagram_link">Instagram</div>
+                        <div class="scroll"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section class="section works_page" id="works_page">
+            <div class="section_inner">
+                <h2 class="title">
+                    <img src="images/work@2x.png" alt="実績">
+                </h2>
+                <div class="works_page_menu">
+                    <a class="menu_gra">
+                        <p>Graphic</p>
+                    </a>
+                    <a class="menu_web">
+                        <p>Web</p>
+                    </a>
+                </div>
+                <div class="works_page_gra">
+                    <p>Graphic</p>
+                </div>
+                <ul class="works_page_container">
+                    <li><a href="#"><img src="images/work01@2x.png" alt="実績1">
+                            <p class="work_page">ロゴ・名刺</p>
+                        </a></li>
+                    <li><a href="#"><img src="images/work02@2x.png" alt="実績2">
+                            <p class="work_page">チラシ</p>
+                        </a></li>
+                    <li><a href="#"><img src="images/work07@2x.png" alt="実績7">
+                            <p class="work_page">飲食店ロゴ</p>
+                        </a></li>
+                </ul>
+
+                <div class="works_page_web">
+                    <p>Web</p>
+                </div>
+                <ul class="works_page_container">
+                    <li><a href="#"><img src="images/work04@2x.png" alt="実績4">
+                            <p class="work_page">ランディングページ</p>
+                        </a></li>
+                    <li><a href="#"><img src="images/work05@2x.png" alt="実績5">
+                            <p class="work_page">コーポレートサイト</p>
+                        </a></li>
+                    <li><a href="#"><img src="images/work06@2x.png" alt="実績6">
+                            <p class="work_page">ランディングページ</p>
+                        </a></li>
+                    <li><a href="#"><img src="images/work08@2x.png" alt="実績8">
+                            <p class="work_page">Instagramバナー</p>
+                        </a></li>
+                    <li><a href="#"><img src="images/work03@2x.png" alt="実績3">
+                            <p class="work_page">Instagramストーリー バナー</p>
+                        </a></li>
+                    <li><a href="#"><img src="images/work09@2x.png" alt="実績9">
+                            <p class="work_page">ポートフォリオサイト</p>
+                        </a></li>
+                </ul>
+
+                <a class="works_page_top">TOPへ戻る</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="section_inner">
+            <div class="footer_contents">
+                <h2 class="footer_logo">
+                    <img src="images/apple-ring_footer@2x.png" alt="フッターロゴ">
+                </h2>
+                <h2 class="footer_name">
+                    <img src="images/dot.s.design_footer@2x.png" alt="ロゴタイトル">
+                </h2>
+                <p class="footer_text">Web・グラフィックデザイン</p>
+            </div>
+            <p class="footer_copy">© 2022 dot.s design</p>
+        </div>
+    </footer>
+    <div class="pagetop">
+        <a href="#header"><img src="images/pagetop@2x.png" alt="ページtop"></a>
+    </div>
+
+    <script>
+        $(function () {
+            //この中に記述 
+            $('.pc_btn, .pc_nav li').click(function () {
+                $('.pc_nav').fadeToggle();
+                $('.pc_btn').toggleClass('open');
+            });
+            //この中に記述 
+            $('.sp_btn, .sp_nav li').click(function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

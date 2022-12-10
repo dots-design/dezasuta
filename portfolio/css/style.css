@@ -55,14 +55,14 @@ img {
 .header_top {
     position: relative;
 }
+
 .header_in {
     position: absolute;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
     top: 90px;
     right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .header_pic {
@@ -73,7 +73,7 @@ img {
     width: 100%;
 }
 
-.header-ico {
+.header_ico {
     width: 87px;
     top: 220px;
     position: absolute;
@@ -81,7 +81,7 @@ img {
     transform: translate(-50%, -50%);
 }
 
-.header-ttl {
+.header_ttl {
     top: 330px;
     width: 242px;
     position: absolute;
@@ -89,7 +89,7 @@ img {
     transform: translate(-50%, -50%);
 }
 
-a.header-name {
+.header_name {
     top: 380px;
     position: absolute;
     left: 50%;
@@ -99,19 +99,36 @@ a.header-name {
     text-align: center;
 }
 
+.header_contact,
+.header_instagram {
+    text-align: center;
+}
+
+.header_contactpage_link img {
+    width: 16px;
+}
+
+.contact_link {
+    font-size: 12px;
+    font-family: "Reem Kufi";
+    padding: 5px 0 20px 0;
+}
+
+.header_instagrampage_link img {
+    width: 16px;
+}
+
+.instagram_link {
+    font-size: 12px;
+    font-family: "Reem Kufi";
+    padding: 5px 0 20px 0;
+}
+
+/* PCハンバーガーここから */
+
+/* PCハンバーガーボタン */
 .pc_nav {
     display: none;
-}
-
-.pc_nav ul {
-    display: flex;
-}
-
-.pc_nav ul li {
-    width: 105px;
-    margin-left: 55px;
-    color: #fff;
-    font-size: 18px;
 }
 
 /* スマホ版メニューを消す */
@@ -126,7 +143,12 @@ a.header-name {
     position: absolute;
     top: 20px;
     right: 30px;
+    width: 35px;
+    height: 35px;
     z-index: 2;
+}
+.pc_btn:hover {
+    cursor: pointer;
 }
 
 .pc_btn span {
@@ -191,31 +213,37 @@ a.header-name {
     font-family: "Reem Kufi";
 }
 
-a.contact_link {
-    font-size: 12px;
-    font-family: "Reem Kufi";
-    padding: 5px 0 20px 0;
-}
-
-.header-contactpage-link {
-    width: 16px;
-}
-
-.header-instagrampage-link {
-    width: 16px;
-}
-a.instagram_link {
-    font-size: 12px;
-    font-family: "Reem Kufi";
-    padding: 5px 0 20px 0;
-}
-
 @media screen and (max-width: 1100px) {
-    .pc_nav,
-    .pc_btn {
-        display: none;
+    /* SPハンバーガーメニュー */
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #b2a3a3;
+        z-index: 1;
     }
-    /* ハンバーガー */
+
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .sp_nav ul li {
+        padding: 20px 0;
+        color: #fff;
+        font-size: 18px;
+        font-family: "Reem Kufi";
+    }
+
+    .sp_nav img {
+        width: 28px;
+    }
+
+    /* SPハンバーガーボタン */
     .sp_btn {
         display: block;
         position: absolute;
@@ -224,6 +252,8 @@ a.instagram_link {
         height: 23px;
         cursor: pointer;
         z-index: 2;
+        width: 35px;
+        height: 35px;
     }
 
     .sp_btn span {
@@ -252,7 +282,7 @@ a.instagram_link {
         bottom: 10px;
     }
 
-    /* ハンバーガー閉じる */
+    /*SPハンバーガー閉じる */
     .sp_btn.open span {
         bottom: 0;
         transform: rotate(45deg);
@@ -263,29 +293,10 @@ a.instagram_link {
         transform: rotate(90deg);
     }
 
-    /* ハンバーガーメニュー */
-    .sp_nav {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: #b2a3a3;
-        z-index: 1;
-    }
-
-    .sp_nav ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-    .sp_nav ul li {
-        padding: 20px 0;
-        color: #fff;
-        font-size: 18px;
-        font-family: "Reem Kufi";
+    /* PCメニューを消す */
+    .pc_nav,
+    .pc_btn {
+        display: none;
     }
 }
 
@@ -295,38 +306,35 @@ main {
 }
 
 /* 横の余白 */
-#About {
+#about {
     padding: 120px 0px 0px 0px;
 }
 
-#Services {
+#services {
     padding: 150px 0px 0px 0px;
 }
 
-#Works {
+#works {
     padding: 150px 0 150px 0px;
 }
 
-#Contact {
+#contact {
     padding: 80px 0 100px 0px;
 }
 
 @media screen and (max-width: 767px) {
-    #About,
-    #Services,
-    #Works,
-    #Contact {
+    .section {
         padding: 80px 0px;
     }
 }
 
 /* コンテンツ幅 */
-.section-inner {
+.section_inner {
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.section-inner2 {
+.section_inner2 {
     max-width: 900px;
     margin: 0 auto;
 }
@@ -348,8 +356,7 @@ main {
     }
 }
 
-/* about*/
-
+/* aboutここから*/
 .about .title {
     width: 122px;
     margin: 0 auto;
@@ -363,7 +370,7 @@ main {
     font-size: 18px;
 }
 
-.col-2 {
+.col_2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -374,7 +381,6 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-    align-items: center;
 }
 
 .about_item2 {
@@ -385,14 +391,15 @@ main {
     width: 50%;
 }
 
-.about_us_mainText {
+.about_title_name {
     line-height: 1.4;
     text-align: center;
     padding-bottom: 20px;
     font-size: 12px;
+    display: block;
 }
 
-.title_pc {
+.about_name {
     width: 163px;
     line-height: 1.6;
     margin: 0 auto;
@@ -405,21 +412,23 @@ main {
     padding-bottom: 15px;
 }
 
-.about_us_subText {
+.about_text {
     font-size: 14px;
     text-align: center;
     line-height: 2;
     letter-spacing: 0.1em;
 }
 
-.about_us_more {
+.about_more {
     padding-top: 40px;
     text-align: right;
     font-size: 14px;
+    display: block;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
-    .col-2 {
+    .col_2 {
         display: block;
     }
 
@@ -439,8 +448,7 @@ main {
     }
 }
 
-/* services*/
-
+/* servicesここから*/
 .services .title {
     width: 122px;
     margin: 0 auto;
@@ -459,37 +467,26 @@ main {
 
 .services_container,
 .services_container2 {
-    display: grid;
-    grid-template-columns: 241px 241px 241px;
-    justify-content: center;
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.item1 img,
-.item2 img,
-.item3 img,
-.item4 img,
-.item5 img,
-.item6 img {
+.services_container li img,
+.services_container2 li img {
     width: 116px;
 }
 
-.item1,
-.item2,
-.item3,
-.item4,
-.item5,
-.item6 {
+.item {
     display: flex;
     align-items: center;
     flex-direction: column;
     align-items: center;
 }
-.item1 dt,
-.item2 dt,
-.item3 dt,
-.item4 dt,
-.item5 dt,
-.item6 dt {
+
+.item_detail {
     font-size: 14px;
     font-weight: bold;
     padding: 10px 0 35px 0;
@@ -504,22 +501,22 @@ main {
     background: #e5e5e5;
 }
 
-p.services_gra,
-p.services_web {
+.services_gra,
+.services_web {
     text-align: center;
     padding: 30px 0;
     font-weight: bold;
 }
 
 @media screen and (max-width: 767px) {
-    .menu .item-list {
+    .menu .item_list {
         display: block;
     }
-    .item-list li {
+    .item_list li {
         width: 100%;
     }
 
-    .menu .item-list img {
+    .menu .item_list img {
         width: 100%;
     }
 
@@ -527,14 +524,13 @@ p.services_web {
         width: 87px;
         padding: 40px 0 20px 0;
     }
-    .item-list dt {
+    .item_detail {
         font-size: 40px;
         margin-bottom: 20px;
     }
 }
 
-/* works */
-
+/* worksここから */
 .works .title {
     width: 91px;
     margin: 0 auto;
@@ -548,17 +544,18 @@ p.services_web {
 }
 
 .works_container {
-    display: grid;
-    grid-template-columns: 300px 300px 300px;
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.work1,
-.work2,
-.work3,
-.work4,
-.work5,
-.work6 {
+.works_container li {
+    width: 300px;
+}
+
+.work {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -579,8 +576,9 @@ p.services_web {
     text-align: right;
     padding-top: 20px;
     font-size: 14px;
+    display: block;
+    cursor: pointer;
 }
-
 @media screen and (max-width: 767px) {
     .works_wrap {
         display: block;
@@ -592,7 +590,7 @@ p.services_web {
     }
 }
 
-/* contact */
+/* contactここから */
 .contact {
     background-image: url("../images/contact_pic-100.jpg");
     background-size: cover;
@@ -602,6 +600,7 @@ p.services_web {
     width: 134px;
     margin: 0 auto;
 }
+
 .contact_top {
     text-align: center;
     padding: 50px 0px;
@@ -612,6 +611,7 @@ p.services_web {
 
 .contact_apple {
     position: relative;
+    cursor: pointer;
 }
 
 .contact_btn {
@@ -630,7 +630,7 @@ p.services_web {
     line-height: 1.6;
 }
 
-/* footer */
+/* footerここから */
 footer {
     background-color: #938383;
 }
@@ -665,7 +665,7 @@ footer {
     padding-bottom: 50px;
 }
 
-/* ページトップボタン */
+/* ページトップボタンここから */
 .pagetop {
     position: fixed;
     width: 24px;
@@ -677,4 +677,279 @@ footer {
     .pagetop {
         width: 100px;
     }
+}
+
+/* 下層ページ about */
+/* about_detailここから */
+
+#about_page {
+    padding-top: 150px;
+}
+
+.about_page .title {
+    width: 122px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.about_page_ring {
+    width: 36px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+.about_page_col_2 {
+    display: flex;
+    justify-content: center;
+    column-gap: 60px;
+}
+
+.about_page_item1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about_page_item2 {
+    display: flex;
+}
+
+.about_page_item1 .item_picture {
+    width: 200px;
+}
+
+.about_page_text {
+    font-size: 14px;
+    line-height: 2;
+    letter-spacing: 0.1em;
+    display: grid;
+    place-items: center;
+}
+
+/*  about moreここから*/
+.about_wrap {
+    position: relative;
+    max-width: 1000px;
+    margin-top: 80px;
+    margin-left: 80px;
+}
+
+.about_wrap,
+.about_wrap_right {
+    width: 400px;
+}
+
+.about_left {
+    max-width: 295px;
+    margin-left: 300px;
+}
+
+.about_page_about_more_title {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+}
+.about_page_about_more_apple {
+    position: absolute;
+    top: 85px;
+    left: 180px;
+}
+
+.about_page_about_more_text {
+    position: absolute;
+    top: 150px;
+    left: 60px;
+    font-size: 14px;
+    line-height: 1.6;
+    z-index: 2;
+}
+
+/* carrierここから */
+.about_wrap_right {
+    position: relative;
+    min-width: 1000px;
+    margin-left: 150px;
+    margin-top: -150px;
+}
+
+.about_wrap_right img {
+    margin-left: 400px;
+}
+
+.about_page_carrier_title {
+    position: absolute;
+    top: 50px;
+    right: 380px;
+}
+.about_page_carrier_apple {
+    position: absolute;
+    top: 85px;
+    right: 385px;
+}
+
+.about_page_carrier_text {
+    position: absolute;
+    top: 150px;
+    right: 230px;
+    font-size: 14px;
+    line-height: 1.6;
+    z-index: 2;
+}
+
+/* contactここから */
+.about_wrap2 {
+    position: relative;
+    max-width: 1000px;
+    margin-top: 80px;
+    margin-left: 180px;
+    margin-top: -150px;
+}
+
+.about_wrap_contact {
+    cursor: pointer;
+}
+.about_left {
+    max-width: 295px;
+    margin-left: 300px;
+}
+
+.about_page_contact_title {
+    position: absolute;
+    top: 40px;
+    left: 80px;
+}
+.about_page_contact_apple {
+    position: absolute;
+    top: 70px;
+    left: 90px;
+}
+
+.about_page_contact_text {
+    position: absolute;
+    top: 120px;
+    left: 55px;
+    font-size: 14px;
+    line-height: 1.6;
+    z-index: 2;
+    font-weight: bold;
+}
+
+/*  TOPへ戻る*/
+.about_page_top {
+    padding-top: 40px;
+    padding-bottom: 100px;
+    text-align: right;
+    font-size: 14px;
+    display: block;
+    cursor: pointer;
+}
+
+/* 下層ページworks */
+/* works_pageここから */
+#works_page {
+    padding-top: 150px;
+}
+.works_page .title {
+    width: 91px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.works_page_menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu_gra,
+.menu_web {
+    cursor: pointer;
+    padding: 0px 20px 0px 5px;
+}
+
+.menu_gra p,
+.menu_web p {
+    font-size: 14px;
+    font-weight: bold;
+    border-left: 8px solid #9b4848;
+    padding: 0px 0px 0px 5px;
+}
+
+.works_page_gra {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.works_page_gra::before {
+    content: "";
+    width: 70px;
+    height: 2px;
+    background-color: #938383;
+}
+
+.works_page_gra::before {
+    margin-right: 20px;
+}
+
+.works_page_gra p {
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.works_page_web {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+.works_page_web::before {
+    content: "";
+    width: 70px;
+    height: 2px;
+    background-color: #938383;
+}
+
+.works_page_web::before {
+    margin-right: 20px;
+}
+
+.works_page_web p {
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.works_page_container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.works_page_container li {
+    width: 300px;
+}
+
+.work_page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    padding-bottom: 80px;
+}
+
+.works_page_top {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    font-size: 14px;
+    display: block;
+    cursor: pointer;
 }

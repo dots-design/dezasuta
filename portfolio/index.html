@@ -15,8 +15,6 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
 
 </head>
 
@@ -24,76 +22,81 @@
 <body>
     <header id="header">
         <div class="header_top">
-            <div class="header_pic"><img src="images/firstview-100.jpg"></div>
-            <div class="header-ico"><img src="images/apple-ring_top@2x.png"></div>
-            <h1 class="header-ttl"><img src="images/dot.s.design_top@2x.png" alt="dot.s design"></h1>
-            <a class="header-name">Web・グラフィックデザイン</a>
+            <div class="header_pic"><img src="images/firstview-100.jpg" alt="top pic"></div>
+            <div class="header_ico"><img src="images/apple-ring_top@2x.png" alt="apple ring"></div>
+            <h1 class="header_ttl"><img src="images/dot.s.design_top@2x.png" alt="dot.s design"></h1>
+            <a class="header_name">Web・グラフィックデザイン</a>
+            <div class="header_menu">
+                <nav class="pc_nav">
+                    <ul>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#services">services</a></li>
+                        <li><a href="#works">works</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </nav>
+                <div class="pc_btn"><span></span></div>
 
-            <nav class="pc_nav">
-                <ul>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#Services">Services</a></li>
-                    <li><a href="#Works">Works</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="pc_btn"><span></span></div>
+                <nav class="sp_nav">
+                    <ul>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#services">services</a></li>
+                        <li><a href="#works">works</a></li>
+                        <li><a href="#contact">contact</a></li>
+                        <li><a href="#"><img src="images/Instagram_white@2x.png" alt="Instagram"></a></li>
+                    </ul>
+                </nav>
 
-            <nav class="sp_nav">
-                <ul>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#Services">Services</a></li>
-                    <li><a href="#Works">Works</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                    <li><a href="#"></a></li>
-                </ul>
-            </nav>
-
-            <div class="sp_btn"><span></span></div>
-
+                <div class="sp_btn"><span></span></div>
+            </div>
             <div class="header_in">
-                <a class="header-contactpage-link" href="#contact"><img src="images/apple@2x.png">
-                    <a class="contact_link">Contact</a>
-                </a>
-                <a class="header-instagrampage-link" href="#"><img src="images\Instagram@2x.png">
-                    <a class="instagram_link">Instagram</a></a>
-                <div class="scroll"></div>
+                <div class="header_contact">
+                    <a class="header_contactpage_link" href="#contact"><img src="images/apple@2x.png" alt="contact">
+                        <div class="contact_link">contact</div>
+                    </a>
+                </div>
+                <div class="header_instagram">
+                    <a class="header_instagrampage_link" href="#"><img src="images/Instagram@2x.png" alt="Instagram">
+                        <div class="instagram_link">Instagram</div>
+                        <div class="scroll"></div>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
 
     <main class="main">
-        <section class="about" id="About">
+        <section class="section about" id="about">
             <h2 class="title">
                 <img src="images/about@2x.png" alt="アバウト">
             </h2>
-            <div class="section-inner">
-                <h3 class="about_message">人とひと、人とモノのご縁が繋がり新たな価値が生まれるような<br>起点を創り、想いをカタチにするお手伝いができればと考えています</h3>
-                <div class="col-2">
+            <div class="section_inner">
+                <p class="about_message">人とひと、人とモノのご縁が繋がり新たな価値が生まれるような<br>起点を創り、想いをカタチにするお手伝いができればと考えています</p>
+                <div class="col_2">
                     <div class="about_item1">
                         <div class="item_picture"><img src="images/fumikayazawa_pic@2x.png" alt="写真">
                         </div>
                     </div>
                     <div class="about_item2">
-                        <div class="item_Text">
-                            <p class="about_us_mainText">デザイナー</p>
-                            <h2 class="title_pc">
+                        <div class="item_text">
+                            <span class="about_title_name">デザイナー</span>
+                            <div class="about_name">
                                 <img src="images/fumikayazawa@2x.png" alt="名前">
-                            </h2>
+                            </div>
                             <div class="about_ring">
                                 <img src="images/apple-ring_about@2x.png" alt="ロゴ">
                             </div>
-                            <p class="about_us_subText">
+                            <p class="about_text">
                                 信州生まれ、信州育ち<br>お客様の声に寄り添い、丁寧なヒアリングをいたします<br>皆様の想いが実るよう、心を込めて制作します</p>
-                            <p class="about_us_more">more</p>
+                            <a class="about_more">more</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="services" id="Services">
-            <div class="section-inner2">
+        <section class="section services" id="services">
+            <div class="section_inner2">
                 <h2 class="title">
                     <img src="images/services@2x.png" alt="サービス">
                 </h2>
@@ -101,99 +104,94 @@
                 <p class="services_detail">Illustrator・Photoshop・HTML・CSS・JavaScript・jQuery</p>
 
                 <div class="graphic">
-                    <p class="services_gra">Graphic</p>
-                    <div class="services_container">
+                    <h3 class="services_gra">Graphic</h3>
+                    <ul class="services_container">
+                        <li><a href="#"><img src="images/service01@2x.png" alt="ロゴ・名刺">
+                                <p class="item_detail">名刺</p>
+                            </a>
+                        </li>
 
-                        <div class="item1">
-                            <img src="images/service01@2x.png" alt="ロゴ・名刺">
-                            <dl>
-                                <dt>名刺</dt>
-                            </dl>
-                        </div>
+                        <li><a href="#"><img src="images/service02@2x.png" alt="チラシ">
+                                <p class="item_detail">チラシ・ポスター</p>
+                            </a>
+                        </li>
 
-                        <div class="item2">
-                            <img src="images/service02@2x.png" alt="チラシ">
-                            <dl>
-                                <dt>チラシ・ポスター</dt>
-                            </dl>
-                        </div>
-
-                        <div class="item3">
-                            <img src="images/service03@2x.png" alt="Instagramバナー">
-                            <dl>
-                                <dt>ロゴ</dt>
-                            </dl>
-                        </div>
-                    </div>
+                        <li><a href="#">
+                                <img src="images/service03@2x.png" alt=">ロゴ">
+                                <p class="item_detail">ロゴ</p>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="web">
-                    <p class="services_web">Web</p>
-                    <div class="services_container2">
+                <div class="section web">
+                    <h3 class="services_web">Web</h3>
+                    <ul class="services_container2">
+                        <li><a href="#">
+                                <img src="images/service04@2x.png" alt="SNSバナー">
+                                <p class="item_detail">SNSバナー</p>
+                            </a>
+                        </li>
 
-                        <div class="item4">
-                            <img src="images/service04@2x.png" alt="ランディングページ">
-                            <dl>
-                                <dt>SNSバナー</dt>
-                            </dl>
-                        </div>
+                        <li><a href="#">
+                                <img src="images/service05@2x.png" alt="Webデザイン">
+                                <p class="item_detail">Webデザイン</p>
+                            </a>
+                        </li>
 
-                        <div class="item5">
-                            <img src="images/service05@2x.png" alt="コーポレートサイト">
-                            <dl>
-                                <dt>Webデザイン</dt>
-                            </dl>
-                        </div>
-
-                        <div class="item6">
-                            <img src="images/service06@2x.png" alt="ランディングページ">
-                            <dl>
-                                <dt>コーディング</dt>
-                            </dl>
-                        </div>
-
-                    </div>
+                        <li><a href="#">
+                                <img src="images/service06@2x.png" alt="コーディング">
+                                <p class="item_detail">コーディング</p>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
+
             </div>
         </section>
 
-        <section class="works" id="Works">
-            <div class="section-inner">
+        <section class="section works" id="works">
+            <div class="section_inner">
                 <h2 class="title">
                     <img src="images/work@2x.png" alt="実績">
                 </h2>
-                <h3 class="works_detail">実績</h3>
-                <div class="works_container">
-                    <p class="work1"><a href="images/work01@2x.png" rel="lightbox" data-title="ギャラリー1"><img
-                                src="images/work01@2x.png" alt="ギャラリー1"></a>ロゴ・名刺
-                    </p>
-                    <p class="work1"><a href="images/work02@2x.png" rel="lightbox" data-title="ギャラリー2"><img
-                                src="images/work02@2x.png" alt="ギャラリー2"></a>チラシ</p>
-                    <p class="work2"><a href="images/work03@2x.png" rel="lightbox" data-title="ギャラリー3"><img
-                                src="images/work03@2x.png" alt="ギャラリー3"></a>Instagramバナー</p>
-                    <p class="work3"><a href="images/work04@2x.png" rel="lightbox" data-title="ギャラリー4"><img
-                                src="images/work04@2x.png" alt="ギャラリー4"></a>ランディングページ</p>
-                    <p class="work4"><a href="images/work05@2x.png" rel="lightbox" data-title="ギャラリー5"><img
-                                src="images/work05@2x.png" alt="ギャラリー5"></a>コーポレートサイト</p>
-                    <p class="work5"><a href="images/work06@2x.png" rel="lightbox" data-title="ギャラリー6"><img
-                                src="images/work06@2x.png" alt="ギャラリー6"></a>ランディングページ</p>
-                </div>
-                <p class="works_more">more</p>
+                <div class="works_detail">実績</div>
+                <ul class="works_container">
+                    <li><a href="#"><img src="images/work01@2x.png" alt="実績1">
+                            <p class="work">ロゴ・名刺</p>
+                        </a></li>
+                    <li><a href="#"><img src="images/work02@2x.png" alt="実績2">
+                            <p class="work">チラシ</p>
+                        </a></li>
+                    <li><a href="#"><img src="images/work03@2x.png" alt="実績3">
+                            <p class="work">Instagramバナー</p>
+                        </a></li>
+                    <li><a href="#"><img src="images/work04@2x.png" alt="実績4">
+                            <p class="work">ランディングページー</p>
+                        </a></li>
+                    <li><a href="#"><img src="images/work05@2x.png" alt="実績5">
+                            <p class="work">コーポレートサイト</p>
+                        </a></li>
+                    <li><a href="#"><img src="images/work06@2x.png" alt="実績6">
+                            <p class="work">ランディングページ</p>
+                        </a></li>
+                </ul>
+                <a class="works_more">more</a>
             </div>
         </section>
 
-        <section class="contact" id="Contact">
-            <div class="section-inner">
+        <section class="section contact" id="contact">
+            <div class="section_inner">
                 <h2 class="title">
                     <img src="images/contact@2x.png" alt="問い合わせ">
                 </h2>
                 <p class="contact_top">
                     お仕事のご依頼・ご相談や<br>こんなことできませんか？<br>こんなことを考えているのですが‥など<br>どうぞお気軽にお問い合わせください
                 </p>
-                <div class="contact_apple">
+                <a class="contact_apple">
                     <div class="contact_btn"><img src="images/apple_contact@2x.png" alt="問い合わせ"></div>
                     <div class="contact_bottom">お問い合わせ<br>フォーム</div>
-                </div>
+                </a>
             </div>
         </section>
 
@@ -201,7 +199,7 @@
     </main>
 
     <footer>
-        <div class="section-inner">
+        <div class="section_inner">
             <div class="footer_contents">
                 <h2 class="footer_logo">
                     <img src="images/apple-ring_footer@2x.png" alt="フッターロゴ">
