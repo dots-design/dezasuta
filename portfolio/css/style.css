@@ -419,12 +419,39 @@ main {
     letter-spacing: 0.1em;
 }
 
-.about_more {
-    padding-top: 40px;
-    text-align: right;
+.about_more a {
+    margin-left: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 70px;
+    padding: 30px 39px 30px 0;
+    color: #938383;
     font-size: 14px;
-    display: block;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.about_more a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 18%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: 1px solid #938383;
+    border-radius: 50%;
+}
+
+.about_more a::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid #938383;
+    border-right: 1px solid #938383;
+    transform: rotate(45deg);
 }
 
 @media screen and (max-width: 767px) {
@@ -574,11 +601,46 @@ main {
 
 .works_more {
     text-align: right;
-    padding-top: 20px;
     font-size: 14px;
     display: block;
     cursor: pointer;
 }
+
+.works_more a {
+    margin-left: 890px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 70px;
+    padding: 30px 39px 30px 0;
+    color: #938383;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.works_more a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 18%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: 1px solid #938383;
+    border-radius: 50%;
+}
+
+.works_more a::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid #938383;
+    border-right: 1px solid #938383;
+    transform: rotate(45deg);
+}
+
 @media screen and (max-width: 767px) {
     .works_wrap {
         display: block;
@@ -747,12 +809,12 @@ footer {
 .about_page_about_more_title {
     position: absolute;
     top: 50px;
-    left: 150px;
+    left: 160px;
 }
 .about_page_about_more_apple {
     position: absolute;
     top: 85px;
-    left: 180px;
+    left: 185px;
 }
 
 .about_page_about_more_text {
@@ -838,10 +900,42 @@ footer {
 .about_page_top {
     padding-top: 40px;
     padding-bottom: 100px;
-    text-align: right;
-    font-size: 14px;
-    display: block;
     cursor: pointer;
+}
+
+.about_page_top a {
+    margin-left: 850px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 105px;
+    padding: 30px 39px 30px 0;
+    color: #938383;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.about_page_top a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 13%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: 1px solid #938383;
+    border-radius: 50%;
+}
+
+.about_page_top a::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid #938383;
+    border-right: 1px solid #938383;
+    transform: rotate(45deg);
 }
 
 /* 下層ページworks */
@@ -920,7 +1014,6 @@ footer {
 
 .works_page_web p {
     padding-left: 10px;
-    font-size: 14px;
     font-weight: bold;
 }
 
@@ -945,6 +1038,7 @@ footer {
     padding-bottom: 80px;
 }
 
+/*  TOPへ戻る*/
 .works_page_top {
     text-align: center;
     padding-top: 20px;
@@ -952,4 +1046,39 @@ footer {
     font-size: 14px;
     display: block;
     cursor: pointer;
+}
+
+.works_page_top a {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 105px;
+    padding: 30px 39px 30px 0;
+    color: #938383;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.works_page_top a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 13%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: 1px solid #938383;
+    border-radius: 50%;
+}
+
+.works_page_top a::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid #938383;
+    border-right: 1px solid #938383;
+    transform: rotate(45deg);
 }
