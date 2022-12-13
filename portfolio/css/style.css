@@ -75,14 +75,14 @@ img {
 
 .header_ico {
     width: 87px;
-    top: 220px;
+    top: 20vw;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .header_ttl {
-    top: 330px;
+    top: 26vw;
     width: 242px;
     position: absolute;
     left: 50%;
@@ -90,7 +90,7 @@ img {
 }
 
 .header_name {
-    top: 380px;
+    top: 29vw;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -211,6 +211,23 @@ img {
     color: #fff;
     font-size: 18px;
     font-family: "Reem Kufi";
+}
+
+/* 想い */
+.connect01 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    margin: auto;
+}
+
+.connect01 div {
+    position: sticky;
+    top: 0;
+    padding-top: 38vw;
 }
 
 @media screen and (max-width: 1100px) {
@@ -354,6 +371,12 @@ main {
     .sp_only {
         display: block;
     }
+}
+
+/* 繋がる */
+.connect02 {
+    width: 60px;
+    margin: 0 auto;
 }
 
 /* aboutここから*/
@@ -960,8 +983,8 @@ footer {
     padding: 0px 20px 0px 5px;
 }
 
-.menu_gra p,
-.menu_web p {
+.menu_gra a,
+.menu_web a {
     font-size: 14px;
     font-weight: bold;
     border-left: 8px solid #9b4848;
@@ -979,7 +1002,7 @@ footer {
 .works_page_gra::before {
     content: "";
     width: 70px;
-    height: 2px;
+    height: 1px;
     background-color: #938383;
 }
 
@@ -1004,7 +1027,7 @@ footer {
 .works_page_web::before {
     content: "";
     width: 70px;
-    height: 2px;
+    height: 1px;
     background-color: #938383;
 }
 
