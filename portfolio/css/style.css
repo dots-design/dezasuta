@@ -47,8 +47,13 @@ img {
     border: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* headerここから */
 #header {
+    position: relative;
     background-color: #f2f2f2;
 }
 
@@ -630,7 +635,7 @@ main {
 }
 
 .works_more a {
-    margin-left: 890px;
+    margin-left: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -765,8 +770,7 @@ footer {
 }
 
 /* 下層ページ about */
-/* about_detailここから */
-
+/* about_pageここから */
 #about_page {
     padding-top: 150px;
 }
@@ -1104,4 +1108,188 @@ footer {
     border-top: 1px solid #938383;
     border-right: 1px solid #938383;
     transform: rotate(45deg);
+}
+
+/* 下層ページworks */
+/* contact_pageここから */
+#contact_page {
+    padding-top: 150px;
+}
+
+.contact_page .title {
+    width: 134px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.contact_page_ring {
+    width: 36px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+.contact_text {
+    text-align: center;
+    line-height: 2;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    font-size: 16px;
+}
+
+.contact_content {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.form_item {
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.form_item label {
+    width: 55%;
+    padding-bottom: 20px;
+}
+
+.form_item label span {
+    font-size: 10px;
+    background-color: #9b4848;
+    color: #fff;
+    padding: 4px 8px;
+    margin-left: 8px;
+    border-radius: 50vh;
+}
+.form_item {
+    width: 100%;
+}
+
+.input_text {
+    width: 100%;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.message {
+    width: 100%;
+    height: 200px;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.submit_botton {
+    border-style: none;
+    background-color: #938383;
+    color: #ffffff;
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 10px 50px;
+    border-radius: 50vh;
+    transition: all 0.4s ease-out;
+    font-family: "Zen Maru Gothic";
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-botton:hover {
+    opacity: 0.5;
+}
+
+/*  TOPへ戻る*/
+.contact_page_top {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    font-size: 14px;
+    display: block;
+    cursor: pointer;
+}
+
+.contact_page_top a {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 105px;
+    padding: 30px 39px 30px 0;
+    color: #938383;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contact_page_top a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 13%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: 1px solid #938383;
+    border-radius: 50%;
+}
+
+.contact_page_top a::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid #938383;
+    border-right: 1px solid #938383;
+    transform: rotate(45deg);
+}
+
+/* モーダルここから */
+.services li {
+    transition: 0.3s;
+}
+
+.services li:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.modal_backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 98;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 200px;
+    padding: 50px;
+    box-sizing: border-box;
+    background: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 99;
+}
+
+.modal p {
+    font-size: 14px;
+    padding: 40px 0;
+    line-height: 1.6;
 }
