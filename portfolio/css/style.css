@@ -388,7 +388,7 @@ main {
 .about .title {
     width: 122px;
     margin: 0 auto;
-    padding: 80px 0 30px 0;
+    padding: 0 0 30px 0;
 }
 
 .about_message {
@@ -1203,7 +1203,7 @@ footer {
     font-size: 16px;
 }
 
-.submit-botton:hover {
+.submit_botton:hover {
     opacity: 0.5;
 }
 
