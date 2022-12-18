@@ -21,8 +21,19 @@
     max-width: 400px;
     margin: 0 auto;
 }
+@media screen and (max-width: 767px) {
+    .section_inner {
+        max-width: 295px;
+        margin: 0 auto;
+    }
 
-/* works_pages_01ここから */
+    .section_inner2 {
+        max-width: 295px;
+        margin: 0 auto;
+    }
+}
+
+/* works_pages共通 */
 .works_pages .title {
     width: 91px;
     margin: 0 auto;
@@ -153,11 +164,39 @@
     font-weight: bold;
 }
 
+@media screen and (max-width: 767px) {
+    .works_pages_outline dt {
+        width: 35%;
+        padding: 16px 4px;
+        font-size: 15px;
+    }
+
+    .works_pages_outline dd {
+        width: 65%;
+        padding: 16px 16px;
+        font-size: 15px;
+    }
+
+    .capture p {
+        padding-top: 20px;
+        line-height: 2;
+        font-size: 15px;
+    }
+}
+
 /* 実績02 */
 .works_pages_pic2 {
     width: 600px;
     margin: 0 auto;
     margin-bottom: 80px;
+}
+@media screen and (max-width: 767px) {
+    .works_pages_pic2 {
+        width: 100vw;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: border-box;
+    }
 }
 
 /* 実績04 */
@@ -173,6 +212,11 @@
 }
 
 .works_pages_pic5_1 {
+    text-align: center;
+}
+
+/* 実績06 */
+.works_pages_pic6 {
     text-align: center;
 }
 
@@ -194,6 +238,23 @@
     width: 200px;
     margin: 0 auto;
     margin-bottom: 80px;
+}
+@media screen and (max-width: 767px) {
+    .works_pages_pc_sp2 {
+        padding-top: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-top: 50px;
+        margin-bottom: 80px;
+    }
+
+    .works_pages_pic9_1 img {
+        margin-bottom: 5px;
+    }
+
+    .works_pages_pic9_2 {
+        display: none;
+    }
 }
 
 /* 下部ボタン*/
@@ -292,4 +353,9 @@ footer {
     width: 24px;
     left: 40px;
     bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+    .pagetop {
+        left: 10px;
+    }
 }
