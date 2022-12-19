@@ -114,7 +114,7 @@
                 <h2 class="title">
                     <img src="images/services@2x.png" alt="Service">
                 </h2>
-                <h3 class="services_tool">使用ツール</h3>
+                <h3 class="services_tool"><span>使用ツール</span></h3>
                 <p class="services_detail">Illustrator・Photoshop・HTML・CSS・JavaScript・jQuery</p>
 
                 <div class="graphic">
@@ -298,6 +298,7 @@
                             dots: true,
                             infinite: true,
                             autoplay: true,
+                            arrows: false,
                             autoplaySpeed: 2000,
                             slidesToShow: 5,
                             slidesToScroll: 1,
@@ -307,7 +308,7 @@
                                     slidesToShow: 1,
                                     slidesToScroll: 1,
                                     infinite: true,
-                                    dots: false
+                                    dots: true
                                 }
                             }]
                         });
@@ -322,8 +323,8 @@
             $(window).resize(function () {
                 sliderSetting();
             });
-        });
 
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
