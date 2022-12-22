@@ -134,8 +134,8 @@ html {
     font-family: "Reem Kufi";
     padding: 5px 0 20px 0;
 }
-/* header sp版 */
 
+/* header レスポンシブ */
 @media screen and (max-width: 1100px) {
     .header_pic {
         display: none;
@@ -254,11 +254,13 @@ html {
 .pc_btn.open span {
     bottom: 0;
     transform: rotate(45deg);
+    background: #ffffff;
 }
 
 .pc_btn.open span::before {
     top: 0;
     transform: rotate(90deg);
+    background: #ffffff;
 }
 
 /* ハンバーガーメニュー */
@@ -287,23 +289,7 @@ html {
     font-family: "Reem Kufi";
 }
 
-/* あしらい＿想い */
-.connect01 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 60px;
-    height: 100%;
-    margin: auto;
-}
-
-.connect01 div {
-    position: sticky;
-    top: 0;
-    padding-top: 38vw;
-}
-
+/* ハンバーガーメニュー レスポンシブ */
 @media screen and (max-width: 1100px) {
     /* SPハンバーガーメニュー */
     .sp_nav {
@@ -433,11 +419,13 @@ html {
     .sp_btn.open span {
         bottom: 0;
         transform: rotate(45deg);
+        background: #ffffff;
     }
 
     .sp_btn.open span::before {
         top: 0;
         transform: rotate(90deg);
+        background: #ffffff;
     }
 
     /* PCメニューを消す */
@@ -445,8 +433,27 @@ html {
     .pc_btn {
         display: none;
     }
+}
 
-    /* あしらい＿想い */
+/* あしらい＿想い */
+.connect01 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    margin: auto;
+}
+
+.connect01 div {
+    position: sticky;
+    top: 0;
+    padding-top: 38vw;
+}
+
+/* あしらい＿想い レスポンシブ*/
+@media screen and (max-width: 1100px) {
     .connect01 div {
         position: sticky;
         top: 0;
@@ -476,6 +483,7 @@ main {
     padding: 80px 0 100px 0px;
 }
 
+/* 横の余白 レスポンシブ*/
 @media screen and (max-width: 767px) {
     #about {
         padding: 100px 20px 0px 20px;
@@ -509,6 +517,7 @@ main {
     margin: 0 auto;
 }
 
+/* コンテンツ幅 レスポンシブ*/
 @media screen and (max-width: 1100px) {
     .section_inner_services {
         max-width: 600px;
@@ -538,7 +547,7 @@ main {
     }
 }
 
-/* レスポンシブ */
+/* レスポンシブ切り替え表示 */
 .pc_only {
     display: block;
 }
@@ -546,6 +555,8 @@ main {
 .sp_only {
     display: none;
 }
+
+/* レスポンシブ切り替え表示 レスポンシブ*/
 @media screen and (max-width: 767px) {
     .pc_only {
         display: none;
@@ -659,6 +670,7 @@ main {
     transform: rotate(45deg);
 }
 
+/* about レスポンシブ*/
 @media screen and (max-width: 767px) {
     .about .title {
         width: 110px;
@@ -755,6 +767,7 @@ main {
     font-weight: bold;
 }
 
+/* services レスポンシブ*/
 @media screen and (max-width: 1100px) {
     .services_container,
     .services_container2 {
@@ -893,6 +906,7 @@ main {
     transform: rotate(45deg);
 }
 
+/* works レスポンシブ */
 @media screen and (max-width: 1100px) {
     .works_container {
         justify-content: space-around;
@@ -949,6 +963,7 @@ main {
     line-height: 1.6;
 }
 
+/* contact レスポンシブ */
 @media screen and (max-width: 767px) {
     .contact {
         background-image: url("../images/contact_sp.png");
@@ -965,15 +980,17 @@ footer {
     display: block;
     padding-top: 50px;
 }
-.footer_contents .footer_logo {
+.footer_logo img {
+    display: block;
     width: 60px;
     margin: 0 auto;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
-.footer_name {
+.footer_name img {
     width: 162px;
     margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 .footer_text {
@@ -981,7 +998,7 @@ footer {
     text-align: center;
     font-size: 12px;
     padding-top: 5px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 .footer_copy {
     color: #fff;
@@ -999,6 +1016,7 @@ footer {
     bottom: 40px;
 }
 
+/* footer レスポンシブ */
 @media screen and (max-width: 767px) {
     .pagetop {
         width: 24px;
@@ -1101,29 +1119,30 @@ footer {
 .about_wrap_right {
     position: relative;
     min-width: 1000px;
-    margin-left: 150px;
+    margin-left: auto;
     margin-top: -150px;
 }
 
 .about_wrap_right img {
-    margin-left: 400px;
+    margin-left: 500px;
+    position: relative;
 }
 
 .about_page_carrier_title {
     position: absolute;
     top: 50px;
-    right: 380px;
+    right: 280px;
 }
 .about_page_carrier_apple {
     position: absolute;
     top: 85px;
-    right: 385px;
+    right: 290px;
 }
 
 .about_page_carrier_text {
     position: absolute;
     top: 150px;
-    right: 230px;
+    right: 140px;
     font-size: 14px;
     line-height: 1.6;
     z-index: 2;
@@ -1209,6 +1228,32 @@ footer {
     transform: rotate(45deg);
 }
 
+/* about_page レスポンシブ */
+@media screen and (max-width: 1160px) {
+    .about_page_col_2 {
+        display: block;
+        padding: 0 20px;
+    }
+
+    .about_page_item2 {
+        padding: 30px 60px 0 60px;
+    }
+}
+
+/* carrier レスポンシブ */
+@media screen and (max-width: 1060px) {
+    .about_wrap_right img {
+        margin-left: 500px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .about_wrap_right {
+        min-width: 900px;
+    }
+}
+
+/* about_page レスポンシブ */
 @media screen and (max-width: 767px) {
     .about_page .title {
         padding-bottom: 20px;
@@ -1441,6 +1486,7 @@ footer {
     transform: rotate(45deg);
 }
 
+/* works_page レスポンシブ */
 @media screen and (max-width: 1100px) {
     .works_page_container {
         justify-content: space-evenly;
@@ -1522,18 +1568,19 @@ footer {
 
 .input_text {
     width: 100%;
-    padding: 8px 16px;
+    padding: 16px 16px;
     margin-top: 20px;
     border: 1px solid #fff;
     border-radius: 3px;
     background-color: #fff;
     box-sizing: border-box;
+    opacity: 0.5;
 }
 
 .message {
     width: 100%;
     height: 200px;
-    padding: 8px 16px;
+    padding: 16px 16px;
     margin-top: 20px;
     border: 1px solid #fff;
     border-radius: 3px;
@@ -1608,6 +1655,7 @@ footer {
     transform: rotate(45deg);
 }
 
+/* contact_page レスポンシブ */
 @media screen and (max-width: 767px) {
     .contact_page .title {
         padding-bottom: 20px;
@@ -1636,7 +1684,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 98;
+    z-index: 49;
     background: rgba(0, 0, 0, 0.8);
 }
 
@@ -1653,7 +1701,7 @@ footer {
     font-size: 16px;
     font-weight: bold;
     text-align: center;
-    z-index: 99;
+    z-index: 50;
 }
 
 .modal p {
@@ -1662,6 +1710,7 @@ footer {
     line-height: 1.6;
 }
 
+/* モーダル レスポンシブ */
 @media screen and (max-width: 1100px) {
     .modal {
         width: 60%;

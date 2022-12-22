@@ -5,6 +5,7 @@
     padding: 100px 0 0 0;
 }
 
+/* 横の余白 レスポンシブ*/
 @media screen and (max-width: 767px) {
     .section {
         padding: 80px 0px;
@@ -21,6 +22,8 @@
     max-width: 400px;
     margin: 0 auto;
 }
+
+/* コンテンツ幅 レスポンシブ*/
 @media screen and (max-width: 767px) {
     .section_inner {
         max-width: 295px;
@@ -100,7 +103,7 @@
     margin-bottom: 50px;
 }
 
-.works_pages_outline h3 {
+.works_pages_outline h2 {
     font-size: 18px;
     font-weight: bold;
     padding: 0 0 20px 0;
@@ -132,20 +135,21 @@
     padding-bottom: 100px;
 }
 
-.capture2 {
-    padding-bottom: 50px;
-}
-
 .capture p {
     padding-top: 20px;
     line-height: 2;
 }
 
-.capture h3 {
+.capture h2 {
     font-size: 18px;
     font-weight: bold;
     padding: 0 0 20px 0;
     border-bottom: 1px solid #938383;
+}
+
+/* 実績９ */
+.capture2 {
+    padding-bottom: 50px;
 }
 
 .capture2 p {
@@ -153,7 +157,7 @@
     line-height: 2;
 }
 
-.capture2 h3 {
+.capture2 h2 {
     font-size: 18px;
     font-weight: bold;
     padding: 0 0 20px 0;
@@ -164,6 +168,7 @@
     font-weight: bold;
 }
 
+/* works_pages共通 レスポンシブ*/
 @media screen and (max-width: 767px) {
     .works_pages_outline dt {
         width: 35%;
@@ -190,6 +195,8 @@
     margin: 0 auto;
     margin-bottom: 80px;
 }
+
+/* 実績02 レスポンシブ*/
 @media screen and (max-width: 767px) {
     .works_pages_pic2 {
         width: 100vw;
@@ -239,6 +246,8 @@
     margin: 0 auto;
     margin-bottom: 80px;
 }
+
+/* 実績09 レスポンシブ*/
 @media screen and (max-width: 767px) {
     .works_pages_pc_sp2 {
         padding-top: 5px;
@@ -312,41 +321,6 @@
     transform: rotate(45deg);
 }
 
-/* footerここから */
-footer {
-    background-color: #938383;
-}
-
-.footer_contents {
-    display: block;
-    padding-top: 50px;
-}
-.footer_contents .footer_logo {
-    width: 60px;
-    margin: 0 auto;
-    padding-bottom: 20px;
-}
-
-.footer_name {
-    width: 162px;
-    margin: 0 auto;
-}
-
-.footer_text {
-    color: #fff;
-    text-align: center;
-    font-size: 12px;
-    padding-top: 5px;
-    padding-bottom: 20px;
-}
-.footer_copy {
-    color: #fff;
-    font-size: 10px;
-    text-align: center;
-    margin: 0 auto;
-    padding-bottom: 50px;
-}
-
 /* ページトップボタンここから */
 .pagetop {
     position: fixed;
@@ -354,6 +328,8 @@ footer {
     left: 40px;
     bottom: 40px;
 }
+
+/* ページトップボタン レスポンシブ*/
 @media screen and (max-width: 767px) {
     .pagetop {
         left: 10px;
