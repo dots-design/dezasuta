@@ -221,11 +221,10 @@
             </div>
             <p class="footer_copy">© 2022 dot.s design</p>
         </div>
+        <div class="pagetop">
+            <a href="#header"><img src="images/pagetop@2x.png" alt=""></a>
+        </div>
     </footer>
-    <div class="pagetop">
-        <a href="#header"><img src="images/pagetop@2x.png" alt=""></a>
-    </div>
-
 
     <div class="modal_backdrop"></div>
     <div class="modal">
@@ -323,8 +322,30 @@
                 sliderSetting();
             });
 
+            $(function () {
+                // 変数にクラスを入れる
+                var btn = $('.pagetop');
+
+                //スクロールしてページトップから100に達したらボタンを表示
+                $(window).on('load scroll', function () {
+                    if ($(this).scrollTop() > 400) {
+                        btn.addClass('active');
+                    } else {
+                        btn.removeClass('active');
+                    }
+                });
+
+            });
+
+            //スクロールしてトップへ戻る
+            btn.on('click', function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                });
+            });
         });
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </body>

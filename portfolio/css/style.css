@@ -1040,6 +1040,15 @@ footer {
     width: 30px;
     left: 40px;
     bottom: 40px;
+    /*デフォルトで非表示にする*/
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*このクラスが付与されると表示する*/
+.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* footer レスポンシブ */
