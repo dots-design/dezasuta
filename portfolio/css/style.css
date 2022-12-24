@@ -327,7 +327,7 @@ html {
         display: block;
         position: absolute;
         top: 20px;
-        right: 30px;
+        right: 15px;
         height: 23px;
         cursor: pointer;
         z-index: 2;
@@ -341,7 +341,7 @@ html {
         display: block;
         position: relative;
         top: 10px;
-        width: 35px;
+        width: 30px;
         height: 3px;
         border-radius: 2px;
         background: #ffffff;
@@ -352,7 +352,7 @@ html {
         content: "";
         display: block;
         position: absolute;
-        width: 35px;
+        width: 30px;
         height: 3px;
         border-radius: 2px;
         background: #ffffff;
@@ -367,7 +367,7 @@ html {
         display: block;
         position: absolute;
         top: 20px;
-        right: 30px;
+        right: 15px;
         height: 23px;
         cursor: pointer;
         z-index: 2;
@@ -381,7 +381,7 @@ html {
         display: block;
         position: relative;
         top: 10px;
-        width: 35px;
+        width: 30px;
         height: 1px;
         border-radius: 2px;
         background: #938383;
@@ -392,7 +392,7 @@ html {
         content: "";
         display: block;
         position: absolute;
-        width: 35px;
+        width: 30px;
         height: 1px;
         border-radius: 2px;
         background: #938383;
@@ -517,6 +517,21 @@ main {
     margin: 0 auto;
 }
 
+.section_inner_about {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section_inner_about_top {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section_inner_about_bottom {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 /* コンテンツ幅 レスポンシブ*/
 @media screen and (max-width: 1100px) {
     .section_inner_services {
@@ -526,6 +541,11 @@ main {
 
     .section_inner2 {
         max-width: 335px;
+        margin: 0 auto;
+    }
+
+    .section_inner_about_top {
+        max-width: 800px;
         margin: 0 auto;
     }
 }
@@ -542,6 +562,12 @@ main {
     }
 
     .section_inner_services {
+        max-width: 335px;
+        margin: 0 auto;
+    }
+
+    .section_inner_about_top,
+    .section_inner_about_bottom {
         max-width: 335px;
         margin: 0 auto;
     }
@@ -1090,11 +1116,6 @@ footer {
     width: 400px;
 }
 
-.about_left {
-    max-width: 295px;
-    margin-left: 300px;
-}
-
 .about_page_about_more_title {
     position: absolute;
     top: 50px;
@@ -1236,25 +1257,42 @@ footer {
     }
 
     .about_page_item2 {
-        padding: 30px 60px 0 60px;
+        padding: 30px 0 60px 0;
     }
 }
 
 /* carrier レスポンシブ */
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 900px) {
     .about_wrap_right img {
-        margin-left: 500px;
+        margin-left: 400px;
     }
-}
 
-@media screen and (max-width: 1000px) {
-    .about_wrap_right {
-        min-width: 900px;
+    /* carrierここから */
+
+    .about_page_carrier_title {
+        right: 380px;
+    }
+
+    .about_page_carrier_apple {
+        right: 390px;
+    }
+
+    .about_page_carrier_text {
+        right: 230px;
     }
 }
 
 /* about_page レスポンシブ */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 880px) {
+    .section_inner_about_top {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .section_inner_about_bottom {
+        margin: 0 auto;
+    }
+
     .about_page .title {
         padding-bottom: 20px;
     }
@@ -1289,7 +1327,6 @@ footer {
     /* carrierここから */
     .about_wrap_right {
         position: relative;
-        min-width: 1000px;
         margin-left: 0;
         margin-top: 60px;
     }
