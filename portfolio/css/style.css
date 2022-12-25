@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* cssリセット */
 
-/*利用するタグによってこちらの内容は増やす*/
+@import url("https://fonts.googleapis.com/css2? family= Reem+Kufi:wght@400;500;600;700 &family= Zen+Maru+Gothic & display=swap");
 
 html,
 body,
@@ -85,8 +85,8 @@ html {
 }
 
 .header_ico {
-    width: 87px;
-    top: 20vw;
+    top: 19vw;
+    width: 6.3vw;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -94,7 +94,7 @@ html {
 
 .header_ttl {
     top: 26vw;
-    width: 242px;
+    width: 17.7vw;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -138,6 +138,10 @@ html {
 /* header レスポンシブ */
 @media screen and (max-width: 1100px) {
     .header_pic {
+        display: none;
+    }
+
+    .header_in {
         display: none;
     }
 
@@ -217,7 +221,7 @@ html {
     width: 35px;
     height: 35px;
     position: fixed;
-    z-index: 100;
+    z-index: 200;
 }
 
 .pc_btn:hover {
@@ -272,7 +276,7 @@ html {
     height: 100vh;
     background: #b2a3a3;
     position: fixed;
-    z-index: 99;
+    z-index: 150;
 }
 
 .pc_nav ul {
@@ -969,7 +973,15 @@ main {
 }
 
 .contact_apple {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 200px;
+    height: 217px;
+    background-image: url("../images/apple_contact@2x.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
     cursor: pointer;
 }
 
@@ -979,10 +991,7 @@ main {
 }
 
 .contact_bottom {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 120px;
+    margin-top: 20px;
     text-align: center;
     font-size: 16px;
     color: #fff;
@@ -1043,6 +1052,7 @@ footer {
     /*デフォルトで非表示にする*/
     opacity: 0;
     visibility: hidden;
+    transition: 0.3s;
 }
 
 /*このクラスが付与されると表示する*/
