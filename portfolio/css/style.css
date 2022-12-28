@@ -532,7 +532,7 @@ main {
 }
 
 .section_inner_about_bottom {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -1124,15 +1124,18 @@ footer {
 
 /*  about moreここから*/
 .about_wrap {
+    display: flex;
+    justify-content: right;
+    margin: 0 auto;
     position: relative;
     max-width: 1000px;
     margin-top: 80px;
     margin-left: 80px;
-}
-
-.about_wrap,
-.about_wrap_right {
+    background-image: url("../images/about_apple.png");
+    height: 428px;
     width: 400px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 }
 
 .about_page_about_more_title {
@@ -1157,32 +1160,36 @@ footer {
 
 /* carrierここから */
 .about_wrap_right {
+    display: flex;
+    justify-content: right;
     position: relative;
-    min-width: 1000px;
+    max-width: 1000px;
     margin-left: auto;
     margin-top: -150px;
-}
-
-.about_wrap_right img {
-    margin-left: 500px;
-    position: relative;
+    background-image: url("../images/about_apple.png");
+    height: 428px;
+    width: 400px;
+    background-repeat: no-repeat;
 }
 
 .about_page_carrier_title {
     position: absolute;
+    display: flex;
+    justify-content: center;
     top: 50px;
-    right: 280px;
+    left: 180px;
 }
+
 .about_page_carrier_apple {
     position: absolute;
     top: 85px;
-    right: 290px;
+    right: 180px;
 }
 
 .about_page_carrier_text {
     position: absolute;
     top: 150px;
-    right: 140px;
+    right: 40px;
     font-size: 14px;
     line-height: 1.6;
     z-index: 2;
@@ -1190,19 +1197,21 @@ footer {
 
 /* contactここから */
 .about_wrap2 {
+    display: flex;
+    justify-content: right;
+    margin: 0 auto;
     position: relative;
     max-width: 1000px;
-    margin-top: 80px;
     margin-left: 180px;
     margin-top: -150px;
+    background-image: url("../images/contact_apple.png");
+    height: 240px;
+    width: 210px;
+    background-repeat: no-repeat;
 }
 
 .about_wrap_contact {
     cursor: pointer;
-}
-.about_left {
-    max-width: 295px;
-    margin-left: 300px;
 }
 
 .about_page_contact_title {
@@ -1280,29 +1289,8 @@ footer {
     }
 }
 
-/* carrier レスポンシブ */
-@media screen and (max-width: 900px) {
-    .about_wrap_right img {
-        margin-left: 400px;
-    }
-
-    /* carrierここから */
-
-    .about_page_carrier_title {
-        right: 380px;
-    }
-
-    .about_page_carrier_apple {
-        right: 390px;
-    }
-
-    .about_page_carrier_text {
-        right: 230px;
-    }
-}
-
 /* about_page レスポンシブ */
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 767px) {
     .section_inner_about_top {
         max-width: 600px;
         margin: 0 auto;
@@ -1348,16 +1336,13 @@ footer {
         position: relative;
         margin-left: 0;
         margin-top: 60px;
-    }
-
-    .about_wrap_right img {
         margin-left: -30px;
     }
 
     .about_page_carrier_title {
         position: absolute;
         top: 50px;
-        left: 150px;
+        left: 175px;
     }
     .about_page_carrier_apple {
         position: absolute;
@@ -1368,10 +1353,7 @@ footer {
     .about_page_carrier_text {
         position: absolute;
         top: 150px;
-        left: 20px;
-        font-size: 14px;
-        line-height: 1.6;
-        z-index: 2;
+        left: 50px;
     }
 
     .about_wrap2 {
