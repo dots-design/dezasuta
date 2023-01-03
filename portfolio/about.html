@@ -14,13 +14,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'zfb4dtz',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
 </head>
 
 
@@ -79,7 +86,7 @@
                 <div class="about_page_ring">
                     <img src="images/apple-ring_about@2x.png" alt="">
                 </div>
-                <p class="about_page_message">人とひと、人とモノのご縁が繋がり<br class="sp_only">新たな価値が生まれるような<br
+                <p class="fade-in fade-in-up about_page_message">人とひと、人とモノのご縁が繋がり<br class="sp_only">新たな価値が生まれるような<br
                         class="pc_only">起点を<br class="sp_only">創り、想いをカタチにするお手伝い<br class="sp_only">ができればと考えています</p>
                 <div class="about_page_col_2">
                     <div class="about_page_item1">
@@ -98,7 +105,7 @@
             </div>
 
             <div class="section_inner_about_bottom">
-                <div class="about_wrap">
+                <div class="fade-in fade-in-up about_wrap">
                     <p class="about_page_about_more_title">about more</p>
                     <i class="about_page_about_more_apple"><img src="images/apple@2x.png" alt="リンゴ装飾"></i>
                     <p class="about_page_about_more_text">
@@ -107,14 +114,14 @@
                     </p>
                 </div>
 
-                <div class="about_wrap_right">
+                <div class="fade-in fade-in-up about_wrap_right">
                     <p class="about_page_carrier_title">carrier</p>
                     <i class="about_page_carrier_apple"> <img src="images/apple@2x.png" alt=""></i>
                     <p class="about_page_carrier_text">
                         前職は管理栄養士として成人を対象とした献立<br>作成・オリジナルメニューの考案、原価管理、<br>イベント企画立案・運営、販売促進業務を担当。<br>健康セミナー講師や特定保健指導など健康サ<br>ポートサービスを兼務。独学で10㎏のダイエッ<br>トに成功し自身の経験を活かし身近な人のダイ<br>エットサポートをしています。
                     </p>
                 </div>
-                <div class="about_wrap2">
+                <div class="fade-in fade-in-up about_wrap2">
                     <a class="about_wrap_contact" href="./contact.html">
                         <p class="about_page_contact_title">contact</p>
                         <i class="about_page_contact_apple"> <img src="images/apple@2x.png" alt=""></i>
@@ -161,9 +168,44 @@
                 $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open');
             });
+
+            $(function () {
+                // 変数にクラスを入れる
+                var btn = $('.pagetop');
+
+                //スクロールしてページトップから100に達したらボタンを表示
+                $(window).on('load scroll', function () {
+                    if ($(this).scrollTop() > 100) {
+                        btn.addClass('active');
+                    } else {
+                        btn.removeClass('active');
+                    }
+                });
+            });
+
+            //スクロールしてトップへ戻る
+            btn.on('click', function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                });
+            });
+        });
+
+        let fadeInTarget = document.querySelectorAll('.fade-in');
+        window.addEventListener('scroll', () => {
+            for (let i = 0; i < fadeInTarget.length; i++) {
+                const rect = fadeInTarget[i].getBoundingClientRect().top;
+                const scroll = window.pageYOffset || document.documentElement.scrollTop;
+                const offset = rect + scroll;
+                const windowHeight = window.innerHeight; // 現在のブラウザの高さ
+                if (scroll > offset - windowHeight + 150) {
+                    fadeInTarget[i].classList.add('scroll-in');
+                }
+            }
         });
 
     </script>
+
 
 </body>
 

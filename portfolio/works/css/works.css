@@ -86,7 +86,7 @@
 .works_pages_web::before {
     content: "";
     width: 70px;
-    height: 2px;
+    height: 1px;
     background-color: #938383;
 }
 
@@ -218,23 +218,47 @@
 
 /* 実績04 */
 .works_pages_pic4 {
-    text-align: center;
+    margin: 0 auto;
     margin-bottom: 80px;
+    width: 80%;
+}
+
+/* 実績04 レスポンシブ*/
+@media screen and (max-width: 767px) {
+    .works_pages_pic4 {
+        margin-bottom: 80px;
+        width: 100%;
+    }
 }
 
 /* 実績05 */
-
-.works_pages_pic5_1 img {
+.works_pages_pic5_1 {
+    margin: 0 auto;
     margin-bottom: 80px;
+    width: 80%;
 }
 
-.works_pages_pic5_1 {
-    text-align: center;
+/* 実績05 レスポンシブ*/
+@media screen and (max-width: 767px) {
+    .works_pages_pic5_1 {
+        margin-bottom: 80px;
+        width: 100%;
+    }
 }
 
 /* 実績06 */
 .works_pages_pic6 {
-    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    width: 80%;
+}
+
+/* 実績06 レスポンシブ*/
+@media screen and (max-width: 767px) {
+    .works_pages_pic6 {
+        margin-bottom: 80px;
+        width: 100%;
+    }
 }
 
 /* 実績09 */
@@ -344,4 +368,24 @@
     .pagetop {
         left: 10px;
     }
+}
+
+/* ふわっと表示させる */
+.fade-in {
+    opacity: 0;
+    transition-duration: 2s;
+    transition-property: opacity, transform;
+}
+
+.fade-in-up {
+    transform: translate(0, 40px);
+}
+
+.scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.fadeIn {
+    transition: opacity 1s cubic-bezier(0.69, 0, 0.33, 1) 0s;
 }

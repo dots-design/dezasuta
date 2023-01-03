@@ -16,12 +16,14 @@ ul,
 li {
     margin: 0;
     padding: 0;
-    line-height: 1;
     color: #938383;
     font-weight: normal;
-    font-family: "Zen Maru Gothic", "Reem Kufi", "sans-serif", "游明朝",
-        "YuMincho", "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3",
-        "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    /* font-family: "Zen Maru Gothic", "Reem Kufi", "sans-serif", "游明朝", */
+    /* "YuMincho", "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", */
+    /* "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif; */
     font-feature-settings: "palt";
 }
 
@@ -133,6 +135,49 @@ html {
     font-size: 12px;
     font-family: "Reem Kufi";
     padding: 5px 0 20px 0;
+}
+
+.scroll_down {
+    position: absolute;
+    right: 50px;
+    bottom: 0%;
+    height: 100px;
+}
+.scroll_down span {
+    display: inline-block;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -18px;
+    top: -31px;
+    font-family: "Reem Kufi";
+    font-size: 14px;
+}
+.scroll_down::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 30px;
+    background: #938383;
+    animation: pathmove 2.5s ease-in-out infinite;
+    opacity: 0;
+}
+
+@keyframes pathmove {
+    0% {
+        height: 0;
+        top: 0;
+        opacity: 0;
+    }
+    30% {
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        height: 0;
+        top: 50px;
+        opacity: 0;
+    }
 }
 
 /* header レスポンシブ */
@@ -346,7 +391,7 @@ html {
         position: relative;
         top: 10px;
         width: 30px;
-        height: 3px;
+        height: 2px;
         border-radius: 2px;
         background: #ffffff;
         transition: 0.3s;
@@ -357,7 +402,7 @@ html {
         display: block;
         position: absolute;
         width: 30px;
-        height: 3px;
+        height: 2px;
         border-radius: 2px;
         background: #ffffff;
         transition: 0.3s;
@@ -968,7 +1013,7 @@ main {
     text-align: center;
     padding: 50px 0px;
     line-height: 2;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -983,6 +1028,21 @@ main {
     background-repeat: no-repeat;
     background-size: 100% auto;
     cursor: pointer;
+    animation-name: ▲▲▲▲;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+}
+
+@keyframes ▲▲▲▲ {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    100% {
+        transform: translate(0, -15px);
+    }
 }
 
 .contact_btn {
@@ -1052,7 +1112,7 @@ footer {
     /*デフォルトで非表示にする*/
     opacity: 0;
     visibility: hidden;
-    transition: 0.3s;
+    transition: 0s;
 }
 
 /*このクラスが付与されると表示する*/
@@ -1142,6 +1202,7 @@ footer {
     position: absolute;
     top: 50px;
     left: 160px;
+    font-weight: 700;
 }
 .about_page_about_more_apple {
     position: absolute;
@@ -1152,7 +1213,7 @@ footer {
 .about_page_about_more_text {
     position: absolute;
     top: 150px;
-    left: 60px;
+    left: 70px;
     font-size: 14px;
     line-height: 1.6;
     z-index: 2;
@@ -1178,6 +1239,7 @@ footer {
     justify-content: center;
     top: 50px;
     left: 180px;
+    font-weight: 700;
 }
 
 .about_page_carrier_apple {
@@ -1189,7 +1251,7 @@ footer {
 .about_page_carrier_text {
     position: absolute;
     top: 150px;
-    right: 40px;
+    right: 50px;
     font-size: 14px;
     line-height: 1.6;
     z-index: 2;
@@ -1218,6 +1280,7 @@ footer {
     position: absolute;
     top: 40px;
     left: 80px;
+    font-weight: 700;
 }
 .about_page_contact_apple {
     position: absolute;
@@ -1228,11 +1291,10 @@ footer {
 .about_page_contact_text {
     position: absolute;
     top: 120px;
-    left: 55px;
+    left: 60px;
     font-size: 14px;
     line-height: 1.6;
     z-index: 2;
-    font-weight: bold;
 }
 
 /*  TOPへ戻る*/
@@ -1455,6 +1517,7 @@ footer {
 
 .works_page_web p {
     padding-left: 10px;
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -1779,5 +1842,111 @@ footer {
         width: 90%;
         padding: 30px 10px;
         font-size: 14px;
+    }
+}
+
+/* ふわっと表示させる */
+.fade-in {
+    opacity: 0;
+    transition-duration: 2s;
+    transition-property: opacity, transform;
+}
+
+.fade-in-up {
+    transform: translate(0, 40px);
+}
+
+.scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.fadeIn {
+    transition: opacity 1s cubic-bezier(0.69, 0, 0.33, 1) 0s;
+}
+
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: #f2f2f2;
+    text-align: center;
+    color: #fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+}
+
+/*画面遷移アニメーション*/
+.splashbg {
+    display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg {
+    display: block;
+    content: "";
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    background-color: #f2f2f2; /*伸びる背景色の設定*/
+    animation-name: PageAnime;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes PageAnime {
+    0% {
+        transform-origin: bottom;
+        transform: scaleY(0);
+    }
+    50% {
+        transform-origin: bottom;
+        transform: scaleY(1);
+    }
+    50.001% {
+        transform-origin: top;
+    }
+    100% {
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+
+#container {
+    opacity: 0; /*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container {
+    animation-name: PageAnimeAppear;
+    animation-duration: 1s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes PageAnimeAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
