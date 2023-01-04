@@ -211,6 +211,13 @@ html {
     .fv_sp_only img {
         width: 100%;
     }
+
+    .scroll_down span {
+        color: #fff;
+    }
+    .scroll_down::after {
+        color: #fff;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -1213,7 +1220,7 @@ footer {
 .about_page_about_more_text {
     position: absolute;
     top: 150px;
-    left: 70px;
+    left: 65px;
     font-size: 14px;
     line-height: 1.6;
     z-index: 2;
@@ -1251,7 +1258,7 @@ footer {
 .about_page_carrier_text {
     position: absolute;
     top: 150px;
-    right: 50px;
+    right: 60px;
     font-size: 14px;
     line-height: 1.6;
     z-index: 2;
@@ -1410,12 +1417,6 @@ footer {
         position: absolute;
         top: 85px;
         left: 185px;
-    }
-
-    .about_page_carrier_text {
-        position: absolute;
-        top: 150px;
-        left: 50px;
     }
 
     .about_wrap2 {
@@ -1675,7 +1676,7 @@ footer {
     border-radius: 3px;
     background-color: #fff;
     box-sizing: border-box;
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .message {
@@ -1687,6 +1688,7 @@ footer {
     border-radius: 3px;
     background-color: #fff;
     box-sizing: border-box;
+    opacity: 0.8;
 }
 
 .submit_botton {
@@ -1948,5 +1950,20 @@ body.appear #container {
     }
     100% {
         opacity: 1;
+    }
+}
+
+.about_message {
+    animation-name: fadein;
+    animation-duration: 10s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translatey(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translatey(0);
     }
 }
